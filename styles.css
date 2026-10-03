@@ -215,7 +215,7 @@ textarea { resize:vertical; }
 .hidden { display:none !important; }
 
 footer { padding: 55px 0; background: #2d0b17; color: rgba(255,255,255,.7); text-align:center; }
-.footer-names { font-family:"Noto Serif Armenian", serif; color:white; font-size:28px; margin:0 0 4px; }
+.footer-names { font-family:"Arm Allegro", serif; color:white; font-size:34px; font-weight:normal; margin:0 0 4px; }
 footer p:last-child { margin:0; letter-spacing:.15em; font-size:13px; }
 
 .reveal { opacity:0; transform:translateY(24px); transition: opacity .75s ease, transform .75s ease; }
