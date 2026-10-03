@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400;500;600;700&family=Noto+Sans+Armenian:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261003-4" />
+  <link rel="stylesheet" href="styles.css?v=20261003-5" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -38,7 +38,12 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">ՄԵՐ ՕՐԸ</p>
-          <h2>Սպասում ենք Ձեզ</h2>
+          <div class="countdown" id="countdown" aria-label="Հարսանիքին մնացել է">
+            <div class="countdown-item"><strong id="countdownDays">00</strong><span>ՕՐ</span></div>
+            <div class="countdown-item"><strong id="countdownHours">00</strong><span>ԺԱՄ</span></div>
+            <div class="countdown-item"><strong id="countdownMinutes">00</strong><span>ՐՈՊԵ</span></div>
+            <div class="countdown-item"><strong id="countdownSeconds">00</strong><span>ՎԱՅՐԿՅԱՆ</span></div>
+          </div>
           <p>Մեզ համար մեծ ուրախություն կլինի այս օրը նշել մեր սիրելի մարդկանց հետ։</p>
         </div>
 
@@ -77,7 +82,7 @@
       <div class="container rsvp-grid">
         <div class="rsvp-copy reveal">
           <p class="eyebrow">ՁԵՐ ՆԵՐԿԱՅՈՒԹՅՈՒՆԸ</p>
-          <h2>Կմասնակցե՞ք</h2>
+          <h2>Կլինե՞ք մեզ հետ</h2>
           <p>Խնդրում ենք հաստատել Ձեր ներկայությունը մինչև <strong>18 հոկտեմբերի 2026</strong>։</p>
         </div>
 
@@ -100,7 +105,7 @@
           </fieldset>
 
           <fieldset class="field choice-field">
-            <legend>Կմասնակցե՞ք *</legend>
+            <legend>Կլինե՞ք մեզ հետ *</legend>
             <label class="choice-card">
               <input type="radio" name="attendance" value="Այո" required checked />
               <span><b>Սիրով կմասնակցեմ</b><small>Ուրախությամբ կլինեմ ձեզ հետ 🤍</small></span>
@@ -146,6 +151,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20261003-1"></script>
 </body>
 </html>
