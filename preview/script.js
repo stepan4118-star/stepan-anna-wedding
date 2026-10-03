@@ -6,11 +6,17 @@ const form = document.getElementById("rsvpForm");
 const statusEl = document.getElementById("formStatus");
 const attendingFields = document.getElementById("attendingFields");
 const guestCount = document.getElementById("guestCount");
+const guestNameFields = document.getElementById("guestNameFields");
+const guestNames = document.getElementById("guestNames");
 
 function setAttendanceFields() {
   const value = document.querySelector('input[name="attendance"]:checked')?.value;
-  attendingFields.classList.toggle("hidden", value === "Ոչ");
-  guestCount.required = value !== "Ոչ";
+  const isAttending = value !== "Ոչ";
+  attendingFields.classList.toggle("hidden", !isAttending);
+  guestCount.required = isAttending;
+  document.querySelectorAll(".guest-name-input").forEach((input) => {
+    input.required = isAttending;
+  });
 }
 
 document.querySelectorAll('input[name="attendance"]').forEach((radio) => {
@@ -21,16 +27,55 @@ function clampCount(value) {
   return Math.max(1, Math.min(10, Number(value) || 1));
 }
 
+function renderGuestNameFields() {
+  const totalGuests = clampCount(guestCount.value);
+  const extraGuests = totalGuests - 1;
+  const currentValues = Array.from(document.querySelectorAll(".guest-name-input")).map((input) => input.value);
+
+  guestNameFields.innerHTML = "";
+
+  for (let i = 0; i < extraGuests; i += 1) {
+    const field = document.createElement("div");
+    field.className = "field";
+
+    const label = document.createElement("label");
+    label.htmlFor = `guestName${i + 1}`;
+    label.textContent = `Ուղեկցող հյուր ${i + 1} — Անուն, ազգանուն *`;
+
+    const input = document.createElement("input");
+    input.id = `guestName${i + 1}`;
+    input.type = "text";
+    input.className = "guest-name-input";
+    input.autocomplete = "name";
+    input.placeholder = "Օր.՝ Արամ Սարգսյան";
+    input.value = currentValues[i] || "";
+    input.required = document.querySelector('input[name="attendance"]:checked')?.value !== "Ոչ";
+
+    field.append(label, input);
+    guestNameFields.appendChild(field);
+  }
+}
+
+function syncGuestNamesValue() {
+  guestNames.value = Array.from(document.querySelectorAll(".guest-name-input"))
+    .map((input) => input.value.trim())
+    .filter(Boolean)
+    .join("\n");
+}
+
 document.getElementById("minusGuest").addEventListener("click", () => {
   guestCount.value = clampCount(Number(guestCount.value) - 1);
+  renderGuestNameFields();
 });
 
 document.getElementById("plusGuest").addEventListener("click", () => {
   guestCount.value = clampCount(Number(guestCount.value) + 1);
+  renderGuestNameFields();
 });
 
 guestCount.addEventListener("change", () => {
   guestCount.value = clampCount(guestCount.value);
+  renderGuestNameFields();
 });
 
 form.addEventListener("submit", async (event) => {
@@ -47,6 +92,7 @@ form.addEventListener("submit", async (event) => {
   submitButton.disabled = true;
   submitButton.textContent = "Ուղարկվում է…";
 
+  syncGuestNamesValue();
   const formData = new FormData(form);
   if (formData.get("attendance") === "Ոչ") {
     formData.set("guestCount", "0");
@@ -67,6 +113,7 @@ form.addEventListener("submit", async (event) => {
 
     form.reset();
     guestCount.value = 1;
+    renderGuestNameFields();
     setAttendanceFields();
     statusEl.textContent = "Շնորհակալություն 🤍 Ձեր պատասխանը ընդունված է։";
     statusEl.classList.add("success");
@@ -117,4 +164,5 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+renderGuestNameFields();
 setAttendanceFields();
