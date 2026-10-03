@@ -193,7 +193,7 @@ footer p:last-child { margin:0; letter-spacing:.15em; font-size:13px; }
 
 @media (max-width: 520px) {
   .container { width:min(100% - 26px, 1120px); }
-  .hero-content { top:65px; padding-left:8px; padding-right:8px; }
+  .hero-content { top:200px; padding-left:8px; padding-right:8px; }
   .date { letter-spacing:.14em; }
   .rsvp-form { padding:22px 16px; border-radius:0; }
   .event-card { padding:32px 18px; }
