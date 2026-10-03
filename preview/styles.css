@@ -184,7 +184,7 @@ footer p:last-child { margin:0; letter-spacing:.15em; font-size:13px; }
 @media (max-width: 800px) {
   .nav-links { display:none; }
   .hero-overlay { inset:10px; }
-  .hero-content { top:200px; }
+  .hero-content { top:65px; }
   .section { padding:80px 0; }
   .timeline { grid-template-columns:1fr; gap:18px; }
   .timeline-line { width:1px; height:55px; justify-self:center; }
