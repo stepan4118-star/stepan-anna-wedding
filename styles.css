@@ -87,7 +87,7 @@ body::selection { background: rgba(107,23,50,.18); }
 .nav-links { display: flex; gap: 24px; }
 .nav-links a { color: rgba(255,255,255,.9); text-decoration: none; font-size: 14px; }
 
-.hero-content { position: relative; z-index: 2; max-width: 850px; padding: 110px 20px 80px; }
+.hero-content { position: relative; top: 34px; z-index: 2; max-width: 850px; padding: 110px 20px 80px; }
 .eyebrow { letter-spacing: .18em; font-size: 12px; font-weight: 600; margin: 0 0 18px; color: var(--burgundy); }
 .hero .eyebrow { color: rgba(255,255,255,.82); }
 
