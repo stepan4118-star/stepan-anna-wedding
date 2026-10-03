@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Arm Allegro";
+  src: url("assets/fonts/ArmAllegroU.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --burgundy: #6b1732;
   --burgundy-dark: #4d0f24;
@@ -65,6 +73,15 @@ body::selection { background: rgba(107,23,50,.18); }
   z-index: 3;
 }
 
+@media (min-width: 801px) {
+  .nav {
+    width: auto;
+    left: 34px;
+    transform: none;
+    margin: 0;
+  }
+}
+
 .monogram {
   width: 48px; height: 48px;
   display: grid; place-items: center;
@@ -79,12 +96,13 @@ body::selection { background: rgba(107,23,50,.18); }
 .nav-links { display: flex; gap: 24px; }
 .nav-links a { color: rgba(255,255,255,.9); text-decoration: none; font-size: 14px; }
 
-.hero-content { position: relative; z-index: 2; max-width: 850px; padding: 110px 20px 80px; }
+.hero-content { position: relative; top: 34px; z-index: 2; max-width: 850px; padding: 110px 20px 80px; }
 .eyebrow { letter-spacing: .18em; font-size: 12px; font-weight: 600; margin: 0 0 18px; color: var(--burgundy); }
 .hero .eyebrow { color: rgba(255,255,255,.82); }
 
 h1, h2, h3 { font-family: "Noto Serif Armenian", serif; margin-top: 0; font-weight: 500; }
 h1 { font-size: clamp(46px, 9vw, 108px); line-height: 1.03; margin-bottom: 22px; text-shadow: 0 12px 40px rgba(0,0,0,.2); }
+.hero h1 { font-family: "Arm Allegro", serif; font-weight: normal; }
 h1 span { font-size: .45em; font-weight: 400; opacity: .84; }
 h2 { font-size: clamp(34px, 5vw, 58px); line-height: 1.15; margin-bottom: 18px; }
 h3 { font-size: 28px; margin-bottom: 10px; }
@@ -118,6 +136,37 @@ h3 { font-size: 28px; margin-bottom: 10px; }
 .section { padding: 110px 0; }
 .section-heading { text-align: center; max-width: 720px; margin: 0 auto 60px; }
 .section-heading > p:last-child { color: var(--muted); }
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(90px, 1fr));
+  gap: 14px;
+  max-width: 650px;
+  margin: 12px auto 28px;
+}
+.countdown-item {
+  padding: 20px 12px 16px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.countdown-item strong {
+  display: block;
+  font-family: "Noto Serif Armenian", serif;
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--burgundy);
+  font-variant-numeric: tabular-nums;
+}
+.countdown-item span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+}
+
 
 .timeline { display: grid; grid-template-columns: 1fr 120px 1fr; align-items: center; }
 .event-card { text-align: center; padding: 40px 30px; border: 1px solid var(--line); background: rgba(255,255,255,.5); box-shadow: 0 24px 70px rgba(60,26,35,.07); }
@@ -166,7 +215,7 @@ textarea { resize:vertical; }
 .hidden { display:none !important; }
 
 footer { padding: 55px 0; background: #2d0b17; color: rgba(255,255,255,.7); text-align:center; }
-.footer-names { font-family:"Noto Serif Armenian", serif; color:white; font-size:28px; margin:0 0 4px; }
+.footer-names { font-family:"Arm Allegro", serif; color:white; font-size:34px; font-weight:normal; margin:0 0 4px; }
 footer p:last-child { margin:0; letter-spacing:.15em; font-size:13px; }
 
 .reveal { opacity:0; transform:translateY(24px); transition: opacity .75s ease, transform .75s ease; }
@@ -175,7 +224,9 @@ footer p:last-child { margin:0; letter-spacing:.15em; font-size:13px; }
 @media (max-width: 800px) {
   .nav-links { display:none; }
   .hero-overlay { inset:10px; }
+  .hero-content { top:65px; }
   .section { padding:80px 0; }
+  .countdown { grid-template-columns: repeat(2, minmax(110px, 1fr)); max-width: 420px; }
   .timeline { grid-template-columns:1fr; gap:18px; }
   .timeline-line { width:1px; height:55px; justify-self:center; }
   .rsvp-grid { grid-template-columns:1fr; gap:35px; }

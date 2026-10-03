@@ -80,6 +80,32 @@ form.addEventListener("submit", async (event) => {
   }
 });
 
+
+// Wedding countdown — ceremony begins 01.11.2026 at 15:00 in Yerevan.
+const weddingDate = new Date("2026-11-01T15:00:00+04:00");
+const countdownDays = document.getElementById("countdownDays");
+const countdownHours = document.getElementById("countdownHours");
+const countdownMinutes = document.getElementById("countdownMinutes");
+const countdownSeconds = document.getElementById("countdownSeconds");
+
+function updateCountdown() {
+  if (!countdownDays) return;
+
+  const remaining = Math.max(0, weddingDate.getTime() - Date.now());
+  const days = Math.floor(remaining / 86400000);
+  const hours = Math.floor((remaining % 86400000) / 3600000);
+  const minutes = Math.floor((remaining % 3600000) / 60000);
+  const seconds = Math.floor((remaining % 60000) / 1000);
+
+  countdownDays.textContent = String(days).padStart(2, "0");
+  countdownHours.textContent = String(hours).padStart(2, "0");
+  countdownMinutes.textContent = String(minutes).padStart(2, "0");
+  countdownSeconds.textContent = String(seconds).padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
 // Subtle reveal animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
