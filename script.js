@@ -1,6 +1,6 @@
 // 1) Deploy the Apps Script code from apps-script.gs as a Web App.
 // 2) Paste the /exec URL below.
-const APPS_SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw9PUaCDs-UB8hl4BO6n-b7s0Ec_L1V4mhp87Dso8KGhT5I7lik25WEo1xZZ6YjnZ8t/exec";
 
 const form = document.getElementById("rsvpForm");
 const statusEl = document.getElementById("formStatus");
