@@ -42,7 +42,7 @@ body::selection { background: rgba(107,23,50,.18); }
   color: #fff;
   background:
     linear-gradient(rgba(64, 10, 29, .62), rgba(64, 10, 29, .70)),
-    url("assets/hero.jpg") center/cover no-repeat,
+    url("assets/hero.JPG") center/cover no-repeat,
     radial-gradient(circle at center, #8f3c55 0%, var(--burgundy-dark) 65%, #2b0915 100%);
 }
 
