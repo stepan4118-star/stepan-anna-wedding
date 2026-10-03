@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6b1732" />
+  <title>Ստեփան և Աննա — 01.11.2026</title>
+  <meta name="description" content="Ստեփան և Աննա — Հարսանեկան հրավեր, 01 նոյեմբերի 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400;500;600;700&family=Noto+Sans+Armenian:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="hero" id="top">
+    <div class="hero-overlay"></div>
+    <nav class="nav container">
+      <a class="monogram" href="#top" aria-label="Գլխավոր">ՍԱ</a>
+      <div class="nav-links">
+        <a href="#details">Օրը</a>
+        <a href="#rsvp">Մասնակցություն</a>
+      </div>
+    </nav>
+
+    <div class="hero-content container reveal">
+      <p class="eyebrow">ՍԻՐՈՎ ՀՐԱՎԻՐՈՒՄ ԵՆՔ ՁԵԶ</p>
+      <h1>Ստեփան <span>և</span> Աննա</h1>
+      <div class="ornament" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+      <p class="date">01 · 11 · 2026</p>
+      <p class="intro">մեզ հետ կիսելու մեր կյանքի ամենագեղեցիկ օրը</p>
+      <a class="btn btn-primary" href="#rsvp">Հաստատել ներկայությունը</a>
+    </div>
+
+    <a class="scroll-cue" href="#details" aria-label="Ոլորել ներքև">⌄</a>
+  </header>
+
+  <main>
+    <section class="section details" id="details">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">ՄԵՐ ՕՐԸ</p>
+          <h2>Սպասում ենք Ձեզ</h2>
+          <p>Մեզ համար մեծ ուրախություն կլինի այս օրը նշել մեր սիրելի մարդկանց հետ։</p>
+        </div>
+
+        <div class="timeline">
+          <article class="event-card reveal">
+            <div class="event-icon">✟</div>
+            <p class="event-label">ՊՍԱԿԱԴՐՈՒԹՅՈՒՆ</p>
+            <h3>Սուրբ Խաչ Եկեղեցի</h3>
+            <div class="event-time">15:00</div>
+            <p>Երևան, Կոմիտաս փող․, 64</p>
+            <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Surb+Khach+Church+Komitas+64+Yerevan" target="_blank" rel="noopener">Բացել քարտեզում ↗</a>
+          </article>
+
+          <div class="timeline-line" aria-hidden="true"><span></span></div>
+
+          <article class="event-card reveal">
+            <div class="event-icon">◇</div>
+            <p class="event-label">ՀԱՆԴԻՍՈՒԹՅՈՒՆ</p>
+            <h3>Vivaldi Hall</h3>
+            <div class="event-time">17:00</div>
+            <p>Երևան, Ազատության պող․, 24</p>
+            <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Vivaldi+Hall+Azatutyan+24+Yerevan" target="_blank" rel="noopener">Բացել քարտեզում ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="container reveal">
+        <div class="ornament light" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+        <p>«Սիրով սպասում ենք Ձեզ մեր կյանքի նոր էջի առաջին օրը»</p>
+      </div>
+    </section>
+
+    <section class="section rsvp" id="rsvp">
+      <div class="container rsvp-grid">
+        <div class="rsvp-copy reveal">
+          <p class="eyebrow">ՁԵՐ ՆԵՐԿԱՅՈՒԹՅՈՒՆԸ</p>
+          <h2>Կմասնակցե՞ք</h2>
+          <p>Խնդրում ենք հաստատել Ձեր ներկայությունը մինչև <strong>18 հոկտեմբերի 2026</strong>։</p>
+        </div>
+
+        <form class="rsvp-form reveal" id="rsvpForm">
+          <div class="field">
+            <label for="name">Անուն, ազգանուն *</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Օր.՝ Արամ Սարգսյան" />
+          </div>
+
+          <fieldset class="field choice-field">
+            <legend>Ու՞մ կողմից եք հրավիրված *</legend>
+            <label class="choice-card">
+              <input type="radio" name="invitedBy" value="Ստեփանի" required />
+              <span><b>Ստեփանի</b></span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="invitedBy" value="Աննայի" required />
+              <span><b>Աննայի</b></span>
+            </label>
+          </fieldset>
+
+          <fieldset class="field choice-field">
+            <legend>Կմասնակցե՞ք *</legend>
+            <label class="choice-card">
+              <input type="radio" name="attendance" value="Այո" required checked />
+              <span><b>Սիրով կմասնակցեմ</b><small>Ուրախությամբ կլինեմ ձեզ հետ 🤍</small></span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="attendance" value="Ոչ" required />
+              <span><b>Ցավոք, չեմ կարողանա</b><small>Սիրով կմտածեմ ձեր մասին</small></span>
+            </label>
+          </fieldset>
+
+          <div id="attendingFields">
+            <div class="field">
+              <label for="guestCount">Քանի՞ հոգով եք մասնակցելու *</label>
+              <div class="counter">
+                <button type="button" id="minusGuest" aria-label="Պակասեցնել">−</button>
+                <input id="guestCount" name="guestCount" type="number" min="1" max="10" value="1" inputmode="numeric" />
+                <button type="button" id="plusGuest" aria-label="Ավելացնել">+</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="guestNames">Ուղեկցող հյուրերի անունները</label>
+              <textarea id="guestNames" name="guestNames" rows="3" placeholder="Եթե մասնակցելու եք մեկից ավելի հոգով"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Ցանկություն կամ նշում</label>
+            <textarea id="message" name="message" rows="3" placeholder="Ըստ ցանկության"></textarea>
+          </div>
+
+          <button class="btn btn-primary submit-btn" type="submit">Ուղարկել պատասխանը</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-names">Ստեփան & Աննա</p>
+      <p>01 · 11 · 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
