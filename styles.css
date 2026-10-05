@@ -68,21 +68,21 @@ body::selection { background: rgba(107,23,50,.18); }
 }
 
 .hero-calla-left {
-  width: min(37vw, 500px);
-  aspect-ratio: 520 / 657;
-  left: -34px;
-  bottom: -96px;
-  background-image: url("assets/calla-left-detailed.svg?v=3");
+  width: min(38vw, 520px);
+  aspect-ratio: 167 / 209;
+  left: -38px;
+  bottom: -54px;
+  background-image: url("assets/calla-left-original.svg?v=1");
   opacity: .72;
 }
 
 .hero-calla-right {
-  width: min(25vw, 330px);
-  aspect-ratio: 300 / 310;
-  right: -58px;
-  top: -36px;
-  background-image: url("assets/calla-right-detailed.svg?v=3");
-  opacity: .54;
+  width: min(26vw, 355px);
+  aspect-ratio: 140 / 175;
+  right: -44px;
+  top: -34px;
+  background-image: url("assets/calla-right-original.svg?v=1");
+  opacity: .56;
 }
 
 .hero-overlay {
@@ -255,8 +255,8 @@ footer p:last-child { margin:0; letter-spacing:.15em; font-size:13px; }
 
 @media (max-width: 800px) {
   .nav-links { display:none; }
-  .hero-calla-left { width: 285px; left: -92px; bottom: -46px; opacity: .62; }
-  .hero-calla-right { width: 185px; right: -56px; top: -24px; opacity: .42; }
+  .hero-calla-left { width: 270px; left: -86px; bottom: -26px; opacity: .64; }
+  .hero-calla-right { width: 175px; right: -50px; top: -18px; opacity: .44; }
   .hero-overlay { inset:10px; }
   .hero-content { top:65px; }
   .section { padding:80px 0; }
