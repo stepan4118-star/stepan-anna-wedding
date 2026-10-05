@@ -72,7 +72,7 @@ body::selection { background: rgba(107,23,50,.18); }
   aspect-ratio: 520 / 657;
   left: -34px;
   bottom: -96px;
-  background-image: url("assets/calla-left-detailed.svg");
+  background-image: url("assets/calla-left-detailed.svg?v=3");
   opacity: .72;
 }
 
@@ -81,7 +81,7 @@ body::selection { background: rgba(107,23,50,.18); }
   aspect-ratio: 300 / 310;
   right: -58px;
   top: -36px;
-  background-image: url("assets/calla-right-detailed.svg");
+  background-image: url("assets/calla-right-detailed.svg?v=3");
   opacity: .54;
 }
 
