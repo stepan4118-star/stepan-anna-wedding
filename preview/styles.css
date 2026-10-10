@@ -65,6 +65,8 @@ body::selection { background: rgba(107,23,50,.18); }
   background-repeat: no-repeat;
   background-size: contain;
   filter: drop-shadow(0 2px 10px rgba(54, 8, 24, .16));
+  will-change: transform;
+  animation: calla-heartbeat 3.2s ease-in-out infinite;
 }
 
 .hero-calla-left {
@@ -74,6 +76,7 @@ body::selection { background: rgba(107,23,50,.18); }
   bottom: -54px;
   background-image: url("assets/calla-left-original.svg?v=1");
   opacity: .72;
+  transform-origin: left bottom;
 }
 
 .hero-calla-right {
@@ -83,6 +86,19 @@ body::selection { background: rgba(107,23,50,.18); }
   top: -34px;
   background-image: url("assets/calla-right-original.svg?v=1");
   opacity: .56;
+  transform-origin: right top;
+}
+
+@keyframes calla-heartbeat {
+  0%, 8%, 100% { transform: scale(1); }
+  13% { transform: scale(1.028); }
+  18% { transform: scale(1); }
+  24% { transform: scale(1.018); }
+  30% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-calla { animation: none; }
 }
 
 .hero-overlay {
