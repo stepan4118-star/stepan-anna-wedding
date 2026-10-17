@@ -22,6 +22,48 @@
 @media(max-width:540px){.masthead{height:239px}.mast-frame{inset:8px}.mast-top{padding:21px}.mast-date{font-size:9px}.emblem{width:36px;height:36px;font-size:12px}.mast-body{margin:-3px auto 0}.mast-body h1{font-size:39px}.mast-body p{font-size:12px}.app-shell{padding:0 13px}.heading-bar{margin:26px 1px 20px}.heading-copy h2{font-size:24px}.actions{display:grid;grid-template-columns:1fr 1fr}.actions .btn{font-size:10px;min-width:0;padding:8px 5px}.stats{grid-template-columns:1fr 1fr}.stat{min-height:76px}.stat:nth-child(2):after{display:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.floor-bar{padding:19px 15px;gap:13px;flex-wrap:wrap}.floor-bar h3{font-size:18px}.floor-actions{justify-content:space-between;width:100%}.floor-hint{padding:11px 15px}.floor-footer{padding:12px}.guest-controls{padding-left:16px;padding-right:16px}.panel-heading{padding:20px 16px 13px}.floor-scroll{max-height:690px}.bottom-utilities{flex-direction:column;align-items:start}.app-shell footer{flex-direction:column;gap:3px}.dialog-shell{padding:28px 20px}.table-dialog-actions{gap:13px;flex-direction:column;align-items:stretch}.dialog-actions-right{justify-content:flex-end;margin-left:0}}
 @media print{@page{size:A4 portrait;margin:15mm}body{background:white!important;color:#171717!important}.grain,.masthead,.app-shell,.dialog,.toast,.floor-panel,.guest-panel{display:none!important}.print-sheet{display:block!important;font-family:'Noto Sans Armenian',sans-serif}.print-title{text-align:center;border-bottom:2px solid #6b1732;padding-bottom:12px;margin-bottom:15px}.print-title h1{font:500 24px 'Noto Serif Armenian','Sylfaen','DejaVu Serif',serif;color:#6b1732;margin:0}.print-title p{font-size:10px;margin:6px}.print-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:20px;row-gap:15px}.print-table{border:1px solid #ccb8b8;padding:12px;break-inside:avoid;page-break-inside:avoid}.print-table h2{font:600 15px 'Noto Serif Armenian','Sylfaen','DejaVu Serif',serif;color:#6b1732;border-bottom:1px solid #d8c5c0;padding-bottom:6px;margin:0 0 5px}.print-table h2 span{float:right;font:400 10px 'Noto Sans Armenian',sans-serif}.print-table ol{font-size:11px;margin:7px 0 0;padding-left:24px}.print-table li{padding:2px}.print-unassigned{margin-top:14px;break-inside:avoid}.print-unassigned h2{font-size:14px;color:#6b1732}.print-unassigned p{font-size:10px}}
 
+
+/* Seat-level plan · original wedding burgundy / ivory / gold theme */
+.table-card,.table-card:hover,.table-card.drop-over,.table-card.is-selected{width:350px;height:350px;min-height:350px;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;outline-offset:0;cursor:default}
+.table-card.drop-over .seat-disc{box-shadow:0 0 0 5px #f2d7d9,0 9px 31px rgba(77,15,36,.12)}
+.table-card.moving{z-index:10;box-shadow:none}
+.table-card .table-head{position:absolute;top:7px;left:50%;width:100px;z-index:5;transform:translateX(-50%);justify-content:space-between;pointer-events:none}
+.table-card .table-head button{pointer-events:auto;background:#fffaf4;border:1px solid #eadbd6;color:#835b63;width:28px;height:28px;border-radius:50%;box-shadow:0 2px 9px rgba(77,15,36,.06);font-size:15px;opacity:0;transition:opacity .15s}
+.table-card:hover .table-head button,.table-card:focus-within .table-head button,.floor-canvas.move-mode .table-card .table-head button{opacity:1}
+.table-card .table-handle{visibility:visible}
+.table-card .table-head .table-handle{visibility:hidden}
+.floor-canvas.move-mode .table-head .table-handle{visibility:visible;cursor:grab}
+.table-card .table-head .table-edit{visibility:visible}
+.seat-ring{position:relative;width:350px;height:350px;isolation:isolate}
+.seat-disc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:126px;height:126px;border-radius:50%;background:radial-gradient(circle at 38% 24%,#fffefd,#f8ebe6);color:var(--wine);border:2px solid #d3b896;box-shadow:0 0 0 6px rgba(255,252,246,.9),0 0 0 7px #f0dbcc,0 8px 27px rgba(77,15,36,.13);z-index:2;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3px;padding:13px;text-align:center;cursor:pointer}
+.seat-disc:hover{background:#fff7ef;border-color:var(--wine)}
+.seat-disc strong{font:600 14px/1.3 'Noto Serif Armenian','Sylfaen',serif;overflow-wrap:anywhere}
+.seat-disc span{font:600 13px/1.2 'Noto Sans Armenian',sans-serif;color:#977178;font-variant-numeric:tabular-nums}
+.table-full .seat-disc{border-color:var(--wine)}
+.seat-slot{position:absolute;left:50%;top:50%;width:112px;height:38px;min-height:38px;border-radius:22px;border:1px solid #d9bab2;background:#fffefa;color:#54313d;display:flex;align-items:center;gap:5px;padding:3px 5px;cursor:pointer;user-select:none;z-index:1;box-shadow:0 3px 12px rgba(53,20,29,.065);transform:translate(-50%,-50%) rotate(var(--seat-angle)) translateX(var(--seat-radius));transition:background .14s,border-color .14s,box-shadow .14s}
+.seat-slot.vacant{border:1px dashed #cbb7ad;background:rgba(255,251,245,.78);color:#978588;box-shadow:none}
+.seat-slot:hover,.seat-slot:focus-visible,.seat-slot.drop-over,.seat-slot.seat-selected{border:2px solid var(--wine);background:#fff1ee;box-shadow:0 0 0 3px rgba(107,23,50,.1);z-index:4}
+.seat-slot.flipped-seat:not(.extra-slot){flex-direction:row-reverse}
+.seat-slot.occupied{cursor:grab}
+.seat-slot[draggable="true"]:active{cursor:grabbing}
+.seat-number{display:flex;flex:0 0 29px;width:29px;height:29px;border-radius:50%;align-items:center;justify-content:center;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;background:#f0dfe0;color:var(--wine)}
+.occupied .seat-number{background:var(--wine);color:white}
+.seat-name{min-width:0;flex:1;font-size:9.5px;font-weight:650;line-height:1.14;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow-wrap:anywhere;text-align:center}
+.vacant .seat-name{font-weight:450;font-size:9px}
+.table-card.extended-table{height:454px;min-height:454px}
+.seat-extras{position:absolute;top:352px;left:11px;right:11px;height:96px;padding:6px 9px;background:#fffdf9;border:1px solid #e6d6d1;border-radius:9px;z-index:3}
+.extra-title{display:block;font-size:9px;font-weight:750;color:var(--wine);letter-spacing:.04em;margin-bottom:5px;text-align:center}
+.extra-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;overflow:auto;max-height:57px;scrollbar-width:thin}
+.seat-slot.extra-slot{position:static;transform:none;left:auto;top:auto;width:auto;min-width:0;height:29px;min-height:29px;padding:1px;gap:1px;box-shadow:none;border-radius:5px;flex-direction:column;justify-content:center}
+.extra-slot .seat-number{font-size:10px;background:transparent;color:var(--wine);height:13px;width:auto;flex:0 0 13px}
+.extra-slot .seat-name{font-size:8px;width:100%;overflow:hidden;white-space:nowrap;display:block;text-overflow:ellipsis}
+.extra-slot.occupied{background:#f1e1e3}
+.extra-slot.drop-over{background:#f3cfd6}
+.floor-canvas.move-mode .seat-slot{pointer-events:none}
+.floor-canvas.move-mode .seat-disc{pointer-events:none}
+.floor-canvas.move-mode .table-head .table-edit{opacity:1}
+@media (pointer:coarse){.table-card .table-head .table-edit{opacity:1}}
+
 </style>
 
 </head>
@@ -92,7 +134,7 @@
         <div class="guest-list" id="guestList" role="list" aria-label="Հյուրերի ցանկ"></div>
         <div class="unassigned-target" id="unassignedTarget" tabindex="0" role="button" aria-label="Տեղափոխել հյուրին առանց սեղանի ցանկ">
           <span class="unassigned-icon">↙</span>
-          <div><strong>Ազատել տեղը</strong><small>Քաշեք հյուրին այստեղ՝ սեղանից հանելու համար</small></div>
+          <div><strong>Ազատել տեղը</strong><small>Քաշեք հյուրին այստեղ՝ նստատեղից հանելու համար</small></div>
         </div>
         <div class="privacy-note"><span aria-hidden="true">⌁</span><p><strong>Մասնավոր պլան</strong><br>Տվյալները չեն ուղարկվում սերվեր։ Դրանք հասանելի են միայն այս դիտարկչում։</p></div>
       </aside>
@@ -108,7 +150,7 @@
             <button class="btn btn-small btn-outline" id="addTableBtn">＋ Սեղան</button>
           </div>
         </div>
-        <div class="floor-hint" id="floorHint"><span class="hint-sparkle">✦</span> Քաշեք հյուրի անունը ձախ ցուցակից դեպի սեղան, կամ ընտրեք անունը և սեղմեք սեղանին։</div>
+        <div class="floor-hint" id="floorHint"><span class="hint-sparkle">✦</span> Քաշեք հյուրին դեպի համարակալված նստատեղը կամ ընտրեք անունը և սեղմեք ազատ տեղին։</div>
         <div class="floor-scroll" id="floorScroll">
           <div class="floor-canvas" id="floorCanvas" aria-label="Սեղանների դասավորությունը">
             <div class="floor-inner-frame"></div>
@@ -118,9 +160,9 @@
           </div>
         </div>
         <div class="floor-footer">
-          <span><i class="legend-dot assigned-dot"></i> Զբաղեցված</span>
-          <span><i class="legend-dot free-dot"></i> Ազատ տեղեր</span>
-          <span class="right-note">Սեղանները կարող եք վերադասավորել՝ միացնելով «Տեղաշարժել» ռեժիմը</span>
+          <span><i class="legend-dot assigned-dot"></i> Զբաղեցված նստատեղ</span>
+          <span><i class="legend-dot free-dot"></i> Ազատ նստատեղ</span>
+          <span class="right-note">Սեղանները տեղափոխելու համար միացրեք «Տեղաշարժել սեղանները»</span>
         </div>
       </section>
     </section>
@@ -138,7 +180,7 @@
       <div class="section-kicker">ՀՅՈՒՐԵՐԻ ՆԵՐՄՈՒԾՈՒՄ</div><h3>Ներմուծել CSV կամ Excel ֆայլ</h3>
       <p class="dialog-intro" id="importSummary"></p>
       <div class="import-preview" id="importPreview"></div>
-      <p class="mini-note">Ընդունվում են CSV (UTF-8) և Excel (.xlsx) ֆայլեր։ Սյունակները՝ «Անուն Ազգանուն» կամ առանձին «Անուն», «Ազգանուն», ընտրովի՝ «Կողմ» և «Սեղան»։ Excel-ում ավտոմատ ընտրվում է տվյալներ պարունակող թերթիկը։</p>
+      <p class="mini-note">Ընդունվում են CSV (UTF-8) և Excel (.xlsx) ֆայլեր։ Սյունակները՝ «Անուն Ազգանուն» կամ առանձին «Անուն», «Ազգանուն», ընտրովի՝ «Կողմ», «Սեղան», «Նստատեղ»։ Excel-ում ավտոմատ ընտրվում է տվյալներ պարունակող թերթիկը։</p>
       <fieldset class="radio-group"><legend>Ինչպե՞ս ներմուծել</legend>
         <label><input type="radio" name="importMode" value="append" checked><span>Ավելացնել առկա ցանկին</span></label>
         <label><input type="radio" name="importMode" value="replace"><span>Փոխարինել հյուրերի ցանկը <small>(սեղանները կմնան)</small></span></label>
@@ -160,7 +202,7 @@
       <button type="button" class="close-btn" data-close="tableDialog" aria-label="Փակել">×</button>
       <div class="section-kicker">ՍԵՂԱՆԻ ԿԱՐԳԱՎՈՐՈՒՄՆԵՐ</div><h3>Խմբագրել սեղանը</h3>
       <label class="form-field">Սեղանի անունը<input id="tableName" maxlength="50" required placeholder="Օրինակ՝ Սեղան 1"></label>
-      <label class="form-field">Նստատեղերի քանակը<input id="tableCapacity" type="number" min="1" max="30" step="1" required></label>
+      <label class="form-field">Նստատեղերի քանակը (1–30)<input id="tableCapacity" type="number" min="1" max="30" step="1" required></label>
       <div class="dialog-actions table-dialog-actions"><button type="button" class="btn btn-outline danger-button" id="deleteTableBtn">Ջնջել սեղանը</button><div class="dialog-actions-right"><button type="button" class="btn btn-outline" data-close="tableDialog">Չեղարկել</button><button type="submit" class="btn btn-solid">Պահպանել</button></div></div>
     </form>
   </dialog>
@@ -171,18 +213,18 @@
 (() => {
   'use strict';
   const KEY = 'stepan_anna_seating_v1';
-  const W = 1154, CW = 243, CH = 214;
+  const W = 1154, CW = 350, CH = 350;
   const $ = (id) => document.getElementById(id);
   const clone = (data) => JSON.parse(JSON.stringify(data));
   const newId = () => `${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 11)}`;
   const safe = (value) => String(value ?? '').replace(/[&<>"']/g, (ch) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
   const defaultState = () => ({
-    version: 1,
+    version: 2,
     guests: [],
     tables: Array.from({length: 12}, (_, n) => ({
       id: newId(), name: `Սեղան ${n+1}`, capacity: 8,
-      x: 37 + (n % 4) * 279, y: 188 + Math.floor(n / 4) * 250
+      x: 22 + (n % 3) * 390, y: 182 + Math.floor(n / 3) * 400
     }))
   });
 
@@ -194,13 +236,46 @@
     return true;
   }
 
+  // Preserve guests and old JSON backups: legacy assignments had table IDs but no seat numbers.
+  function normalizeSeats(data) {
+    for (const guest of data.guests) {
+      if (!data.tables.some(t => t.id === guest.tableId)) {
+        guest.tableId = null;
+        guest.seatNumber = null;
+      }
+    }
+    for (const table of data.tables) {
+      const members = data.guests.filter(g => g.tableId === table.id);
+      const used = new Set();
+      for (const guest of members) {
+        const n = guest.seatNumber;
+        if (Number.isInteger(n) && n >= 1 && n <= table.capacity && !used.has(n)) used.add(n);
+        else guest.seatNumber = null;
+      }
+      for (const guest of members) {
+        if (guest.seatNumber !== null) continue;
+        const n = Array.from({length: table.capacity}, (_,i) => i+1).find(n => !used.has(n));
+        if (n === undefined) {guest.tableId = null;guest.seatNumber = null;}
+        else {guest.seatNumber = n;used.add(n);}
+      }
+    }
+    // The original 4-column starter layout was too small for numbered seats.
+    // Rearrange ONLY a recognizable untouched starter layout; keep user-customized positions.
+    if ((data.version || 1) < 2 && data.tables.length === 12 && data.tables.every((t, n) =>
+        Math.abs(t.x - (37 + n % 4 * 279)) < 3 && Math.abs(t.y - (188 + Math.floor(n / 4)*250)) < 3)) {
+      data.tables.forEach((t,n) => {t.x=22+(n%3)*390;t.y=182+Math.floor(n/3)*400;});
+    }
+    data.version = 2;
+    return data;
+  }
+
   let state = defaultState();
   let storageReady = true;
   try {
     const saved = localStorage.getItem(KEY);
     if (saved) {
       const parsed = JSON.parse(saved);
-      if (isValidState(parsed)) state = parsed;
+      if (isValidState(parsed)) state = normalizeSeats(parsed);
       else throw new Error('Կոռումպացված տվյալներ');
     }
   } catch (err) {
@@ -257,6 +332,8 @@
   const guestFor = id => state.guests.find(g => g.id === id);
   const atTable = id => state.guests.filter(g => g.tableId === id);
   const isPlaced = g => Boolean(g.tableId && tableFor(g.tableId));
+  const atSeat = (tableId, seatNumber) => state.guests.find(g => g.tableId === tableId && g.seatNumber === seatNumber);
+  const firstEmpty = table => Array.from({length:table.capacity},(_,i)=>i+1).find(n=>!atSeat(table.id,n));
   function initials(name) { return [...name.trim()].slice(0, 1).join('') || '✧'; }
 
   function renderStats() {
@@ -287,39 +364,54 @@
       const t = tableFor(g.tableId);
       return `<div class="guest-item" role="listitem" draggable="true" tabindex="0" data-guest="${safe(g.id)}" aria-pressed="${selectedId === g.id}" title="Քաշեք կամ սեղմեք՝ սեղան ընտրելու համար">
         <span class="drag-icon" aria-hidden="true">⠿</span><span class="guest-initial">${safe(initials(g.name))}</span>
-        <span class="guest-body"><span class="guest-name">${safe(g.name)}</span><span class="guest-detail"><span>${safe(g.side || 'Կողմը նշված չէ')}</span>${t ? `<b>· ${safe(t.name)}</b>` : ''}</span></span>
+        <span class="guest-body"><span class="guest-name">${safe(g.name)}</span><span class="guest-detail"><span>${safe(g.side || 'Կողմը նշված չէ')}</span>${t ? `<b>· ${safe(t.name)} · տեղ ${g.seatNumber || '—'}</b>` : ''}</span></span>
         <button type="button" class="guest-menu" data-edit-guest="${safe(g.id)}" aria-label="Խմբագրել ${safe(g.name)}">⋯</button></div>`;
     }).join('') : `<div class="empty-guest"><span class="empty-flower">✿</span><strong>${state.guests.length ? 'Համընկնող հյուրեր չկան' : 'Հյուրերի ցանկը դեռ դատարկ է'}</strong>${state.guests.length ? 'Փոխեք զտիչը կամ որոնման բառը։' : 'Ներմուծեք CSV / Excel ֆայլ կամ ավելացրեք հյուրերին ձեռքով։'}</div>`;
   }
 
+  // Eight numbered chairs radiate out from the round table, as in the reference.
+  // Tables with >8 seats also have an accessible numbered extension below the ring.
+  function seatMarkup(t, n, extra=false) {
+    const guest = atSeat(t.id, n);
+    const angle = -90 + (n - 1) * 45;
+    const flipped = angle > 90 || angle < -90;
+    const readableAngle = flipped ? angle + (angle < -90 ? 180 : -180) : angle;
+    const radius = flipped ? -113 : 113;
+    const body = guest ? `<span class="seat-name">${safe(guest.name)}</span>` : `<span class="seat-name">Ազատ տեղ</span>`;
+    const classes = `seat-slot ${guest ? 'occupied' : 'vacant'} ${extra?'extra-slot':''} ${flipped?'flipped-seat':''} ${selectedId === guest?.id?'seat-selected':''}`;
+    return `<button type="button" class="${classes}" data-seat="${n}" data-table-seat="${safe(t.id)}" ${guest?`data-table-guest="${safe(guest.id)}" draggable="true"`:''}
+      aria-label="${safe(t.name)}, տեղ ${n}: ${guest ? safe(guest.name) : 'ազատ'}"
+      title="${safe(t.name)} · Տեղ ${n} · ${guest ? safe(guest.name) : 'Ազատ'}"
+      ${!extra?`style="--seat-angle:${readableAngle}deg;--seat-radius:${radius}px"`:''}>
+      <span class="seat-number">${n}</span>${body}</button>`;
+  }
   function renderTables() {
     const canvas = $('floorCanvas');
-    const height = Math.max(1060, ...state.tables.map(t => Math.min(3500, t.y + 315)));
+    const height = Math.max(1800, ...state.tables.map(t => Math.min(6000, t.y + (t.capacity>8?460:385))));
     canvas.style.height = height + 'px';
     $('tablesLayer').innerHTML = state.tables.map((t, i) => {
       const members = atTable(t.id);
       const full = members.length >= t.capacity;
-      const visual = members.slice(0, 8).map(g => `<span draggable="true" data-table-guest="${safe(g.id)}" class="table-guest" title="${safe(g.name)}">${safe(g.name)}</span>`).join('');
-      return `<article class="table-card ${full ? 'table-full' : ''}" data-table="${safe(t.id)}" tabindex="0" role="button" aria-label="${safe(t.name)}. ${members.length} հյուր, ${t.capacity} նստատեղ" style="left:${clamp(t.x,20,W-CW-20)}px;top:${clamp(t.y,154,3400)}px">
-        <div class="table-head"><button class="table-handle" data-move="${safe(t.id)}" type="button" title="Քաշել սեղանը">⠿</button><button class="table-edit" type="button" data-edit-table="${safe(t.id)}" aria-label="Խմբագրել ${safe(t.name)}">✎</button></div>
-        <div class="table-visual"><span class="table-number">${String(i+1).padStart(2,'0')}</span><small>${members.length} / ${t.capacity}</small></div>
-        <div class="table-label">${safe(t.name)}</div>
-        <div class="table-guests">${visual || '<span class="table-empty">Քաշեք հյուրերին այստեղ</span>'}</div>
-        ${members.length > 8 ? `<span class="seat-overflow">+${members.length - 8} հյուր</span>` : ''}
+      const main = Array.from({length:Math.min(t.capacity,8)}, (_,n)=>seatMarkup(t,n+1)).join('');
+      const extras = t.capacity > 8 ? `<div class="seat-extras"><span class="extra-title">ԼՐԱՑՈՒՑԻՉ ՆՍՏԱՏԵՂԵՐ · ${t.capacity-8}</span><div class="extra-grid">${Array.from({length:t.capacity-8},(_,n)=>seatMarkup(t,n+9,true)).join('')}</div></div>` : '';
+      return `<article class="table-card ${full ? 'table-full' : ''} ${t.capacity > 8 ? 'extended-table' : ''}" data-table="${safe(t.id)}" tabindex="0" role="group" aria-label="${safe(t.name)}. ${members.length} հյուր, ${t.capacity} նստատեղ" style="left:${clamp(t.x,20,W-CW-20)}px;top:${clamp(t.y,154,5800)}px">
+        <div class="table-head"><button class="table-handle" data-move="${safe(t.id)}" type="button" title="Քաշեք սեղանը" aria-label="Տեղաշարժել ${safe(t.name)}">⠿</button><button class="table-edit" type="button" data-edit-table="${safe(t.id)}" title="Փոխել անունը կամ տեղերի քանակը" aria-label="Խմբագրել ${safe(t.name)}">✎</button></div>
+        <div class="seat-ring">${main}<button type="button" class="seat-disc" data-assign-table="${safe(t.id)}" title="Նստեցնել առաջին ազատ տեղում" aria-label="${safe(t.name)}, ${members.length} հյուր ${t.capacity}-ից։ Ընտրեք հյուրին և սեղմեք այստեղ՝ ազատ տեղում նստեցնելու համար։"><strong>${safe(t.name)}</strong><span>${members.length} / ${t.capacity}</span></button></div>
+        ${extras}
       </article>`;
     }).join('');
     canvas.classList.toggle('move-mode', $('moveTablesToggle').checked);
     if (selectedId) {
-      document.querySelectorAll('.table-card').forEach(el => el.classList.toggle('is-selected', guestFor(selectedId)?.tableId === el.dataset.table));
+      document.querySelectorAll('.table-card').forEach(el => el.classList.toggle('is-selected',guestFor(selectedId)?.tableId === el.dataset.table));
     }
   }
 
   function updateHint() {
     const selected = guestFor(selectedId);
     $('floorHint').textContent = $('moveTablesToggle').checked
-      ? '⠿ Քաշեք սեղանի վերևի ձախ բռնակից՝ նրա դիրքը փոխելու համար։'
-      : selected ? `Ընտրված է՝ ${selected.name}։ Սեղմեք համապատասխան սեղանին կամ «Ազատել տեղը» դաշտին։`
-      : '✦ Քաշեք հյուրի անունը ձախ ցուցակից դեպի սեղան, կամ ընտրեք անունը և սեղմեք սեղանին։';
+      ? '⠿ Քաշեք սեղանը ցանկացած մասից՝ սրահում դրա դիրքը փոխելու համար։'
+      : selected ? `Ընտրված է՝ ${selected.name}։ Սեղմեք համարակալված նստատեղին կամ սեղանի կենտրոնին։`
+      : '✦ Քաշեք հյուրին դեպի համարակալված նստատեղը կամ սեղմեք ազատ տեղին։';
   }
 
   function render() { renderStats(); renderGuests(); renderTables(); updateHint(); }
@@ -330,14 +422,32 @@
     renderGuests(); renderTables(); updateHint();
   }
 
-  function assignGuest(id, tableId) {
+  function assignGuest(id, tableId, explicitSeat=null) {
     const guest = guestFor(id);
     const target = tableId ? tableFor(tableId) : null;
     if (!guest || (tableId && !target)) return;
-    if ((guest.tableId || null) === (tableId || null)) { selectedId = null; render(); return; }
-    if (target && atTable(tableId).length >= target.capacity) { toast(`${target.name} սեղանը լիքն է։ Ազատեք տեղ կամ մեծացրեք տարողությունը։`, true); return; }
-    change(() => {guest.tableId = target ? target.id : null; selectedId = null; });
-    toast(target ? `${guest.name} → ${target.name}` : `${guest.name} վերադարձվել է չնստեցվածների ցանկ։`);
+    if (!target) {
+      if (!guest.tableId) {selectedId=null;render();return;}
+      change(() => {guest.tableId=null;guest.seatNumber=null;selectedId=null;});
+      toast(`${guest.name} վերադարձվել է չնստեցվածների ցանկ։`);
+      return;
+    }
+    if (explicitSeat !== null && (!Number.isInteger(explicitSeat) || explicitSeat<1 || explicitSeat>target.capacity)) return;
+    const destination = explicitSeat ?? firstEmpty(target);
+    if (!destination) {toast(`${target.name} սեղանը լիքն է։ Ընտրեք այլ սեղան կամ փոխանակեք երկու հյուրերի տեղերը։`,true);return;}
+    if (guest.tableId === target.id && guest.seatNumber === destination) {selectedId=null;render();return;}
+    const occupant=atSeat(target.id,destination);
+    // Swapping two seated guests preserves both placements without overwriting anyone.
+    // An unassigned guest cannot displace an occupied seat: choose an empty one.
+    if (occupant && (!guest.tableId || !tableFor(guest.tableId))) {
+      toast(`Տեղ ${destination}-ը զբաղված է։ Ընտրեք ազատ նստատեղ։`,true);return;
+    }
+    const oldTableId = guest.tableId,oldSeat = guest.seatNumber;
+    change(() => {
+      if (occupant) {occupant.tableId=oldTableId;occupant.seatNumber=oldSeat;}
+      guest.tableId=target.id;guest.seatNumber=destination;selectedId=null;
+    });
+    toast(`${guest.name} → ${target.name}, տեղ ${destination}${occupant?' · Տեղերը փոխանակվեցին':''}`);
   }
 
   function startDrag(e, id) {
@@ -381,38 +491,47 @@
     const edit = e.target.closest('[data-edit-table]');
     if (edit) return openTableDialog(edit.dataset.editTable);
     if (e.target.closest('[data-move]')) return;
-    const chip = e.target.closest('[data-table-guest]');
-    if (chip) return selectGuest(chip.dataset.tableGuest);
-    const card = e.target.closest('[data-table]');
-    if (card && selectedId && !$('moveTablesToggle').checked) assignGuest(selectedId,card.dataset.table);
+    if ($('moveTablesToggle').checked) return;
+    const seat=e.target.closest('[data-table-seat]');
+    if (seat) {
+      if (selectedId) return assignGuest(selectedId,seat.dataset.tableSeat,Number(seat.dataset.seat));
+      if (seat.dataset.tableGuest) return selectGuest(seat.dataset.tableGuest);
+      return toast('Ընտրեք հյուրին ձախ ցանկից, ապա սեղմեք այս համարակալված տեղին։');
+    }
+    const center=e.target.closest('[data-assign-table]');
+    if(center && selectedId) return assignGuest(selectedId,center.dataset.assignTable);
   });
   layer.addEventListener('keydown', e => {
-    if (e.target.classList.contains('table-card') && (e.key==='Enter' || e.key===' ')) {
-      e.preventDefault(); if(selectedId) assignGuest(selectedId,e.target.dataset.table);
+    // Seat buttons are native keyboard-accessible controls (Enter / Space).
+    if(e.target.classList.contains('table-card') && (e.key==='Enter'||e.key===' ')) {
+      e.preventDefault();if(selectedId)assignGuest(selectedId,e.target.dataset.table);
     }
   });
   layer.addEventListener('dragstart', e => {
-    const chip = e.target.closest('[data-table-guest]');
-    if (chip) startDrag(e,chip.dataset.tableGuest);
+    const seat=e.target.closest('[data-table-guest]');
+    if(seat) startDrag(e,seat.dataset.tableGuest);
   });
   layer.addEventListener('dragend',endDrag);
   layer.addEventListener('dragover',e => {
-    const card = e.target.closest('[data-table]');
+    const seat=e.target.closest('[data-table-seat]');
+    const card=e.target.closest('[data-table]');
     if (!card || $('moveTablesToggle').checked) return;
     e.preventDefault();e.dataTransfer.dropEffect='move';
-    document.querySelectorAll('.table-card.drop-over').forEach(el => el.classList.remove('drop-over'));
-    card.classList.add('drop-over');
+    layer.querySelectorAll('.drop-over').forEach(el=>el.classList.remove('drop-over'));
+    (seat || card).classList.add('drop-over');
   });
   layer.addEventListener('dragleave',e => {
-    const card=e.target.closest('[data-table]');
-    if(card && !card.contains(e.relatedTarget))card.classList.remove('drop-over');
+    const element=e.target.closest('.seat-slot,.table-card');
+    if(element && !element.contains(e.relatedTarget))element.classList.remove('drop-over');
   });
   layer.addEventListener('drop',e => {
+    const seat=e.target.closest('[data-table-seat]');
     const card=e.target.closest('[data-table]');
     if(!card)return;
     e.preventDefault();
     const id=e.dataTransfer.getData('text/plain');
-    endDrag();assignGuest(id,card.dataset.table);
+    endDrag();
+    assignGuest(id,card.dataset.table,seat?Number(seat.dataset.seat):null);
   });
   const bin = $('unassignedTarget');
   bin.addEventListener('click',() => {if(selectedId)assignGuest(selectedId,null);else toast('Ընտրեք հյուրին, ապա սեղմեք այստեղ։');});
@@ -421,19 +540,18 @@
   bin.addEventListener('dragleave',e => {if(!bin.contains(e.relatedTarget))bin.classList.remove('drop-over');});
   bin.addEventListener('drop',e => {e.preventDefault();const id=e.dataTransfer.getData('text/plain');endDrag();assignGuest(id,null);});
 
-  // Optional moving of tables; only the handle can start moving them.
+  // In move mode grab anywhere on the table (except its Edit control).
   $('moveTablesToggle').addEventListener('change',() => { selectedId = null;render(); });
   layer.addEventListener('pointerdown',e => {
-    const handle=e.target.closest('[data-move]');
-    if (!handle || !$('moveTablesToggle').checked || e.button !== 0) return;
-    const t = tableFor(handle.dataset.move);
+    const card=e.target.closest('.table-card');
+    if (!card || !$('moveTablesToggle').checked || e.button !== 0 || e.target.closest('[data-edit-table]')) return;
+    const t=tableFor(card.dataset.table);
     if(!t)return;
-    const card=handle.closest('.table-card');
     e.preventDefault();
     const x0=e.clientX,y0=e.clientY,oldX=t.x,oldY=t.y;
     let changed=false;
     moving=true;card.classList.add('moving');
-    handle.setPointerCapture(e.pointerId);
+    card.setPointerCapture(e.pointerId);
     const onMove=(ev)=>{
       const maxY=Math.max(740,$('floorCanvas').clientHeight-CH-32);
       t.x=clamp(Math.round(oldX+ev.clientX-x0),24,W-CW-24);
@@ -442,9 +560,9 @@
       if(t.x!==oldX||t.y!==oldY) changed=true;
     };
     const onUp=()=>{
-      handle.removeEventListener('pointermove',onMove);
-      handle.removeEventListener('pointerup',onUp);
-      handle.removeEventListener('pointercancel',onUp);
+      card.removeEventListener('pointermove',onMove);
+      card.removeEventListener('pointerup',onUp);
+      card.removeEventListener('pointercancel',onUp);
       card.classList.remove('moving');moving=false;
       if(changed){
         const movedX=t.x,movedY=t.y;
@@ -452,9 +570,9 @@
         change(()=>{t.x=movedX;t.y=movedY;});
       }
     };
-    handle.addEventListener('pointermove',onMove);
-    handle.addEventListener('pointerup',onUp);
-    handle.addEventListener('pointercancel',onUp);
+    card.addEventListener('pointermove',onMove);
+    card.addEventListener('pointerup',onUp);
+    card.addEventListener('pointercancel',onUp);
   });
 
   function openGuestDialog(id=null) {
@@ -474,7 +592,7 @@
     if(!name) return;
     const side=$('guestSide').value;
     const existing=guestFor(editingGuestId);
-    change(() => {if(existing){existing.name=name;existing.side=side;} else state.guests.push({id:newId(),name,side,tableId:null});});
+    change(() => {if(existing){existing.name=name;existing.side=side;} else state.guests.push({id:newId(),name,side,tableId:null,seatNumber:null});});
     $('guestDialog').close();toast(existing?'Հյուրի տվյալները թարմացվեցին։':'Հյուրը ավելացվեց։');
   });
   $('deleteGuestBtn').addEventListener('click',()=>{
@@ -502,7 +620,7 @@
   $('deleteTableBtn').addEventListener('click',()=>{
     const t=tableFor(editingTableId);if(!t)return;
     if(!confirm(`Ջնջե՞լ «${t.name}» սեղանը։ Այդ սեղանի հյուրերը կդառնան չնստեցված։`))return;
-    change(()=>{state.tables=state.tables.filter(item=>item.id!==t.id);state.guests.forEach(g=>{if(g.tableId===t.id)g.tableId=null;});});
+    change(()=>{state.tables=state.tables.filter(item=>item.id!==t.id);state.guests.forEach(g=>{if(g.tableId===t.id){g.tableId=null;g.seatNumber=null;}});});
     $('tableDialog').close();toast('Սեղանը ջնջվեց։');
   });
   $('addTableBtn').addEventListener('click',()=>{
@@ -511,7 +629,7 @@
     const existing = new Set(state.tables.map(t=>t.name));
     while(existing.has(`Սեղան ${i}`))i++;
     const n=state.tables.length;
-    const t={id:newId(),name:`Սեղան ${i}`,capacity:8,x:37+(n%4)*279,y:188+Math.floor(n/4)*250};
+    const t={id:newId(),name:`Սեղան ${i}`,capacity:8,x:22+(n%3)*390,y:182+Math.floor(n/3)*400};
     change(()=>state.tables.push(t));
     $('floorCanvas').style.height=Math.max(1060,t.y+315)+'px';
     toast('Ավելացվել է նոր սեղան։');
@@ -561,7 +679,8 @@
     first:['անուն','firstname','first','givenname'],
     last:['ազգանուն','lastname','last','surname','familyname'],
     side:['կողմ','ումկողմից','հրավիրվածկողմից','invitedby','side','group'],
-    table:['սեղան','սեղանիհամար','սեղանհամար','table','tablenumber','tableno']
+    table:['սեղան','սեղանիհամար','սեղանհամար','table','tablenumber','tableno'],
+    seat:['նստատեղ','նստատեղիհամար','տեղ','տեղիհամար','seat','seatnumber','seatno']
   };
   function guestsFromRows(rows) {
     if(!rows.length)throw new Error('Ֆայլը դատարկ է։');
@@ -574,7 +693,8 @@
       const name=hasHeader ? (indices.full>=0?val(indices.full):[val(indices.first),val(indices.last)].filter(Boolean).join(' ')) : val(0);
       const side=hasHeader ? val(indices.side) : val(1);
       const table=hasHeader ? val(indices.table) : val(2);
-      return {name:name.replace(/\s+/g,' '),side,table};
+      const seat=hasHeader ? val(indices.seat) : val(3);
+      return {name:name.replace(/\s+/g,' '),side,table,seat};
     }).filter(g=>g.name);
     if(!entries.length) throw new Error('Հյուրերի անուններ չեն գտնվել։');
     return entries;
@@ -631,7 +751,7 @@
   }
   function previewImport(entries) {
     $('importSummary').textContent=`Գտնվել է ${entries.length} հյուր։ Ստուգեք տվյալներն ու ընտրեք ներմուծման եղանակը։`;
-    $('importPreview').innerHTML=`<table><thead><tr><th>Անուն Ազգանուն</th><th>Կողմ</th><th>Սեղան</th></tr></thead><tbody>${entries.slice(0,5).map(g=>`<tr><td>${safe(g.name)}</td><td>${safe(g.side||'—')}</td><td>${safe(g.table||'—')}</td></tr>`).join('')}</tbody></table>`;
+    $('importPreview').innerHTML=`<table><thead><tr><th>Անուն Ազգանուն</th><th>Կողմ</th><th>Սեղան</th><th>Տեղ</th></tr></thead><tbody>${entries.slice(0,5).map(g=>`<tr><td>${safe(g.name)}</td><td>${safe(g.side||'—')}</td><td>${safe(g.table||'—')}</td><td>${safe(g.seat||'—')}</td></tr>`).join('')}</tbody></table>`;
     $('importDialog').showModal();
   }
   $('importBtn').addEventListener('click',()=> $('csvFile').click());
@@ -662,8 +782,10 @@
       if(mode==='replace') {state.guests=[];selectedId=null;}
       for(const entry of entries){
         const t=findCsvTable(entry.table);
-        const available=t && atTable(t.id).length < t.capacity;
-        state.guests.push({id:newId(),name:entry.name,side:normalizeSide(entry.side),tableId:available?t.id:null});
+        const preferred=Number(entry.seat);
+        const free=t?(Number.isInteger(preferred) && preferred>=1 && preferred<=t.capacity && !atSeat(t.id,preferred) ? preferred : firstEmpty(t)):null;
+        const available=Boolean(t && free);
+        state.guests.push({id:newId(),name:entry.name,side:normalizeSide(entry.side),tableId:available?t.id:null,seatNumber:available?free:null});
         if(available)assigned++;
         else if(entry.table)unmatched++;
       }
@@ -686,7 +808,7 @@
   }
   const today=()=>new Date().toISOString().slice(0,10);
   $('exportBtn').addEventListener('click',()=>{
-    const rows=[['Անուն Ազգանուն','Կողմ','Սեղան'],...state.guests.map(g=>[g.name,g.side||'',tableFor(g.tableId)?.name||''])];
+    const rows=[['Անուն Ազգանուն','Կողմ','Սեղան','Նստատեղ'],...state.guests.map(g=>[g.name,g.side||'',tableFor(g.tableId)?.name||'',g.seatNumber||''])];
     const csv='\uFEFF'+rows.map(row=>row.map(csvCell).join(',')).join('\r\n');
     download(csv,'text/csv;charset=utf-8',`stepan-anna-seating-${today()}.csv`);
     toast('CSV ֆայլը ներբեռնվեց UTF-8 կոդավորմամբ։');
@@ -702,7 +824,7 @@
       const parsed=JSON.parse(await file.text());
       if(!isValidState(parsed))throw new Error('Սա վավեր պահուստային պատճեն չէ։');
       if(!confirm('Վերականգնե՞լ տվյալները։ Առկա հյուրերն ու սեղանները կփոխարինվեն։'))return;
-      change(()=>{state={version:1,guests:clone(parsed.guests),tables:clone(parsed.tables)};selectedId=null;});
+      change(()=>{state=normalizeSeats({version:parsed.version||1,guests:clone(parsed.guests),tables:clone(parsed.tables)});selectedId=null;});
       toast('Պլանն ամբողջությամբ վերականգնվել է։');
     }catch(err){toast(`Վերականգնման սխալ. ${err.message}`,true);}
     finally{e.target.value='';}
@@ -715,8 +837,8 @@
 
   function printPlan() {
     const ordered=state.tables.map(t=>{
-      const guests=atTable(t.id);
-      return `<article class="print-table"><h2>${safe(t.name)} <span>${guests.length} / ${t.capacity}</span></h2><ol>${guests.length?guests.map(g=>`<li>${safe(g.name)}</li>`).join(''):'<li>Հյուրեր չկան</li>'}</ol></article>`;
+      const guests=atTable(t.id).sort((a,b)=>a.seatNumber-b.seatNumber);
+      return `<article class="print-table"><h2>${safe(t.name)} <span>${guests.length} / ${t.capacity}</span></h2><ol>${guests.length?guests.map(g=>`<li value="${g.seatNumber}">${safe(g.name)}</li>`).join(''):'<li>Հյուրեր չկան</li>'}</ol></article>`;
     }).join('');
     const pending=state.guests.filter(g=>!isPlaced(g));
     $('printContents').innerHTML=`<div class="print-title"><h1>Ստեփան և Աննա · Հյուրերի նստեցում</h1><p>01 · 11 · 2026 · Vivaldi Hall · Ընդամենը՝ ${state.guests.length} հյուր</p></div><div class="print-grid">${ordered}</div>${pending.length?`<div class="print-unassigned"><h2>Չնստեցված հյուրեր (${pending.length})</h2><p>${pending.map(g=>safe(g.name)).join(' · ')}</p></div>`:''}`;
