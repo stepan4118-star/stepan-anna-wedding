@@ -64,6 +64,26 @@
 .floor-canvas.move-mode .table-head .table-edit{opacity:1}
 @media (pointer:coarse){.table-card .table-head .table-edit{opacity:1}}
 
+
+/* Seating editor v3 — Seatory-inspired layout, original wedding identity */
+html,body{height:100%}body{background:#f7f4f0}
+.masthead{height:118px}.mast-frame{inset:9px}.mast-top{padding:28px 33px}.mast-date{font-size:10px}.mast-flower{right:8%;top:-230px;opacity:.23;width:260px}.mast-body{margin:-47px auto 0;padding:0 120px;pointer-events:none}.mast-body .tiny-caps{display:none}.mast-body .tiny-caps{font-size:8px}.mast-body h1{font-size:30px;margin:0 0 -4px}.mast-body p{font-size:10px;margin:0}.mast-body .flourish{display:none}
+.app-shell{max-width:none;padding:0 22px}.heading-bar{margin:19px 0 13px}.heading-copy h2{font-size:23px;margin:1px 0 3px}.stats{margin-bottom:14px;border-radius:9px;overflow:hidden}.stat{min-height:61px;gap:10px}.stat-icon{font-size:22px}.stat strong{font-size:23px}.stat small{font-size:10px}.progress-track{height:3px}
+.workspace{grid-template-columns:320px minmax(0,1fr);gap:14px}.guest-panel{border-radius:10px;top:12px}.floor-panel{border-radius:10px;overflow:hidden}.guest-panel .panel-heading{padding:15px 18px 8px}.panel-heading h3{font-size:18px}.guest-controls{padding:0 18px 12px}.guest-list{height:calc(100dvh - 440px);min-height:235px;max-height:600px}.unassigned-target{padding:10px;margin:10px 12px}.privacy-note{padding:9px 15px}.guest-item{min-height:57px}
+.floor-bar{padding:15px 19px 13px;gap:8px}.floor-bar h3{font-size:18px;margin:1px 0 0}.floor-actions{gap:7px}.floor-hint{font-size:11px;padding:9px 16px}.floor-scroll{height:min(76vh,950px);min-height:580px;max-height:none;background:#22282d;overflow:auto;cursor:grab;scrollbar-color:#765b66 #25272c}.floor-scroll.panning{cursor:grabbing}.floor-canvas{width:1154px;min-height:1750px;overflow:hidden;background-color:#222427;background-image:radial-gradient(circle at 55% 22%,rgba(117,85,98,.13),transparent 52%),repeating-linear-gradient(0deg,transparent 0px,transparent 39px,rgba(242,225,215,.07) 39px,rgba(242,225,215,.07) 40px),repeating-linear-gradient(90deg,transparent 0px,transparent 39px,rgba(242,225,215,.07) 39px,rgba(242,225,215,.07) 40px)}.floor-inner-frame{inset:23px;border-color:rgba(240,223,199,.2)}.floor-inner-frame:after{border-color:rgba(240,223,199,.065)}.dance-floor,.floor-entrance{display:none}
+.floor-footer{padding:11px 20px;gap:18px}.legend-dot.assigned-dot{background:#ba8a9b}.legend-dot.free-dot{background:#f0e7df;border:1px solid #ad9095}.floor-footer span{font-size:10px}
+.editor-toolbar{display:flex;gap:7px;padding:10px 14px;align-items:center;flex-wrap:wrap;background:#faf8f6;border-bottom:1px solid var(--line)}.editor-tool{border:1px solid #ddced0;border-radius:6px;background:white;color:#653d4a;min-height:32px;padding:6px 10px;font-size:11px;font-weight:650}.editor-tool:hover{background:#f7e9ed;border-color:#b78e9b}.editor-tool[aria-pressed=true]{background:#6b1732;color:white;border-color:#6b1732}.editor-tool:focus-visible{outline:2px solid #6b1732}.editor-toolbar .tool-divider{width:1px;height:25px;background:#e0d5d2;margin:0 4px}.editor-toolbar .tool-spacer{flex:1}.zoom-label{color:#6b1732;font-size:12px;min-width:47px;text-align:center;font-variant-numeric:tabular-nums}.zoom-group{display:flex;align-items:center;gap:4px}.zoom-group .editor-tool{padding:5px 10px;min-width:29px}
+.table-card,.table-card:hover,.table-card.drop-over,.table-card.is-selected{width:350px;height:350px;min-height:350px}.table-card .table-head{top:0;left:50%;width:90px}.table-card .table-head button{opacity:.4;background:#faefe9;box-shadow:0 2px 10px #17171a30}.table-card:hover .table-head button,.floor-canvas.move-mode .table-head button{opacity:1}
+.seat-ring{width:350px;height:350px}.seat-disc{width:126px;height:126px;background:linear-gradient(155deg,#fff9f2,#eee2df);border-color:#ccbdb8;box-shadow:0 0 0 7px #242529,0 0 0 9px #ad8b96,0 10px 26px #0e0d1099;color:#63243d}.seat-disc:hover{background:#fff6ed;border-color:#894058}.seat-disc strong{font-size:15px}.seat-disc span{font-size:13px;color:#81646b}
+.seat-slot{transform:translate(-50%,-50%)!important;border:1px solid #d8cfd0;border-radius:24px;background:#f8f5f4;box-shadow:0 3px 14px #0006;flex-direction:row!important;color:#251f25;padding:3px 5px;gap:4px;height:38px;min-height:32px;z-index:2}.seat-slot.occupied{background:#f9f4f1}.seat-slot.vacant{border:1px dashed #9e9a9b;color:#777579;background:#34373a;box-shadow:none}.seat-slot.vacant .seat-number{background:#55575a;color:#fff}.seat-slot.vacant .seat-name{color:#adabae}.seat-slot:hover,.seat-slot.drop-over,.seat-slot.seat-selected{background:#ead7dd;outline:2px solid #c78c9f;box-shadow:0 0 0 4px rgba(187,120,141,.3)}.seat-number{flex:0 0 25px;width:25px;height:25px;border-radius:50%;font-size:12px;background:#e6dde0;color:#5a3041}.seat-slot.occupied .seat-number{background:#6b1732;color:white}.seat-name{font-size:9px;line-height:1.1}.seat-slot.mini-seat .seat-name{display:none}.seat-slot.mini-seat{padding:2px;justify-content:center;border-radius:50%;height:33px;width:33px!important}.seat-slot.mini-seat .seat-number{flex:0 0 27px;width:27px;height:27px}.table-card.table-rect .seat-disc{width:184px;height:92px;border-radius:14px}.table-card.table-rect .seat-ring:before{content:'';position:absolute;left:89px;top:125px;width:172px;height:100px;background:rgba(213,171,184,.12);border:1px dashed #916273;border-radius:15px}.table-full .seat-disc{border-color:#6b1732}
+.table-card.extended-table{height:350px;min-height:350px}.seat-extras{display:none}.seat-slot.flipped-seat:not(.extra-slot){flex-direction:row!important}.floor-canvas.move-mode .table-card{cursor:move}.floor-canvas.move-mode .seat-slot{pointer-events:none}.floor-canvas.move-mode .seat-disc{pointer-events:none}
+.room-layer{position:absolute;inset:0;pointer-events:none}.room-object{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #a78881;color:#e7d3cf;background:rgba(107,53,72,.45);font-size:12px;font-weight:700;letter-spacing:.04em;user-select:none;min-height:40px;border-radius:6px;text-align:center;box-shadow:0 7px 20px #13111466}.room-object small{font-size:9px;color:#ccacba;letter-spacing:.12em}.room-object[data-kind=entrance]{border:1px dashed #d1b29d;background:rgba(244,235,217,.05);height:44px!important}.room-object[data-kind=pillar]{background:#504a4b;border-radius:50%;border:2px solid #807373}.floor-canvas.move-mode .room-layer{pointer-events:auto}.floor-canvas.move-mode .room-object{cursor:move}.room-object.moving-room{outline:3px solid #bd889b;z-index:10}
+.floor-canvas .table-card.located .seat-disc{outline:5px solid #d9ac77;outline-offset:6px}
+.bottom-utilities{padding:14px 0 25px}.app-shell footer{padding:18px 0 20px}
+@media (max-width:1050px){.workspace{grid-template-columns:275px minmax(0,1fr)}.guest-list{height:360px}.mast-body{margin:-67px auto 0}.right-note{display:none}}
+@media (max-width:760px){.masthead{height:97px}.mast-top{padding:23px 18px}.mast-tag{display:none}.mast-body{margin:-64px auto 0;padding:8px 55px 0}.mast-body h1{font-size:24px}.mast-body p{display:none}.heading-bar{margin:14px 0}.heading-copy h2{font-size:19px}.app-shell{padding:0 10px}.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.stat{gap:5px;min-height:60px}.stat small{font-size:9px}.stat strong{font-size:19px}.stat-icon{display:none}.workspace{grid-template-columns:1fr}.guest-panel{position:relative;top:0}.guest-list{max-height:200px;height:auto;min-height:120px}.floor-scroll{height:65vh;min-height:440px}.floor-bar{flex-wrap:wrap}.editor-toolbar{gap:4px;padding:7px}.editor-tool{font-size:10px;padding:5px 8px}.editor-toolbar .tool-spacer{flex-basis:100%}.floor-footer{flex-wrap:wrap}.app-shell footer{font-size:11px}}
+@media print{.editor-toolbar{display:none!important}}
+
 </style>
 
 </head>
@@ -150,12 +170,28 @@
             <button class="btn btn-small btn-outline" id="addTableBtn">＋ Սեղան</button>
           </div>
         </div>
+        <div class="editor-toolbar" role="toolbar" aria-label="Սրահի դասավորության գործիքներ">
+          <button class="editor-tool" id="quickRound" title="Ավելացնել կլոր սեղան">◯ Կլոր սեղան</button>
+          <button class="editor-tool" id="quickRect" title="Ավելացնել երկար սեղան">▭ Երկար սեղան</button>
+          <span class="tool-divider"></span>
+          <button class="editor-tool" id="addDance" title="Ավելացնել պարահրապարակ">✧ Պարահրապարակ</button>
+          <button class="editor-tool" id="addEntrance" title="Ավելացնել մուտք">↳ Մուտք</button>
+          <button class="editor-tool" id="addStage" title="Ավելացնել բեմ">▥ Բեմ</button>
+          <button class="editor-tool" id="addPillar" title="Ավելացնել սյուն">◉ Սյուն</button>
+          <span class="tool-divider"></span>
+          <button class="editor-tool" id="exportPlanPng" title="Ներբեռնել սրահի քարտեզը PNG պատկերով">⇩ PNG քարտեզ</button>
+          <span class="tool-spacer"></span>
+          <span class="zoom-group" aria-label="Մասշտաբի գործիքներ">
+            <button class="editor-tool" id="zoomOut" aria-label="Փոքրացնել">−</button><span class="zoom-label" id="zoomLabel">100%</span><button class="editor-tool" id="zoomIn" aria-label="Մեծացնել">+</button><button class="editor-tool" id="zoomFit" title="Տեղավորել լայնությամբ">⊞ Տեղավորել</button>
+          </span>
+        </div>
         <div class="floor-hint" id="floorHint"><span class="hint-sparkle">✦</span> Քաշեք հյուրին դեպի համարակալված նստատեղը կամ ընտրեք անունը և սեղմեք ազատ տեղին։</div>
         <div class="floor-scroll" id="floorScroll">
           <div class="floor-canvas" id="floorCanvas" aria-label="Սեղանների դասավորությունը">
             <div class="floor-inner-frame"></div>
             <div class="dance-floor"><span>✧ &nbsp; ՊԱՐԱՀՐԱՊԱՐԱԿ &nbsp; ✧</span><small>ՍՏԵՓԱՆ · ԱՆՆԱ</small></div>
             <div class="floor-entrance">ՄՈՒՏՔ <span>⌄</span></div>
+            <div id="roomLayer" class="room-layer" aria-label="Սրահի տարրեր"></div>
             <div id="tablesLayer"></div>
           </div>
         </div>
@@ -203,10 +239,18 @@
       <div class="section-kicker">ՍԵՂԱՆԻ ԿԱՐԳԱՎՈՐՈՒՄՆԵՐ</div><h3>Խմբագրել սեղանը</h3>
       <label class="form-field">Սեղանի անունը<input id="tableName" maxlength="50" required placeholder="Օրինակ՝ Սեղան 1"></label>
       <label class="form-field">Նստատեղերի քանակը (1–30)<input id="tableCapacity" type="number" min="1" max="30" step="1" required></label>
+      <label class="form-field">Սեղանի ձևը<select id="tableShape"><option value="round">Կլոր սեղան</option><option value="rect">Երկար / ուղղանկյուն սեղան</option></select></label>
+      <label class="form-field">Պտտել սեղանը<select id="tableRotation"><option value="0">0°</option><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select></label>
       <div class="dialog-actions table-dialog-actions"><button type="button" class="btn btn-outline danger-button" id="deleteTableBtn">Ջնջել սեղանը</button><div class="dialog-actions-right"><button type="button" class="btn btn-outline" data-close="tableDialog">Չեղարկել</button><button type="submit" class="btn btn-solid">Պահպանել</button></div></div>
     </form>
   </dialog>
 
+  <dialog id="objectDialog" class="dialog"><form id="objectForm" class="dialog-shell">
+     <button type="button" class="close-btn" data-close="objectDialog" aria-label="Փակել">×</button>
+     <div class="section-kicker">ՍՐԱՀԻ ՏԱՐՐ</div><h3>Խմբագրել նշումը</h3>
+     <label class="form-field">Անվանումը<input id="objectName" maxlength="70" required></label>
+     <div class="dialog-actions"><button type="button" class="btn btn-outline danger-button" id="deleteObject">Ջնջել տարրը</button><button type="button" class="btn btn-outline" data-close="objectDialog">Չեղարկել</button><button type="submit" class="btn btn-solid">Պահպանել</button></div>
+  </form></dialog>
   <section id="printSheet" class="print-sheet" aria-hidden="true"><div id="printContents"></div></section>
   <script>
 /* Ստեփան և Աննա · Local-only wedding seating planner · UTF-8 */
@@ -219,12 +263,17 @@
   const newId = () => `${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 11)}`;
   const safe = (value) => String(value ?? '').replace(/[&<>"']/g, (ch) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+  const defaultObjects = () => [
+    {id:newId(),kind:'dance',name:'ՊԱՐԱՀՐԱՊԱՐԱԿ',x:409,y:46},
+    {id:newId(),kind:'entrance',name:'ՄՈՒՏՔ',x:500,y:1800}
+  ];
   const defaultState = () => ({
-    version: 2,
+    version: 3,
+    roomObjects: defaultObjects(),
     guests: [],
     tables: Array.from({length: 12}, (_, n) => ({
       id: newId(), name: `Սեղան ${n+1}`, capacity: 8,
-      x: 22 + (n % 3) * 390, y: 182 + Math.floor(n / 3) * 400
+      shape:'round',rotation:0,x: 22 + (n % 3) * 390, y: 244 + Math.floor(n / 3) * 400
     }))
   });
 
@@ -232,6 +281,7 @@
     if (!s || !Array.isArray(s.tables) || !Array.isArray(s.guests) || s.tables.length > 150 || s.guests.length > 10000) return false;
     if (s.tables.some(t => typeof t.id !== 'string' || typeof t.name !== 'string' || !Number.isInteger(t.capacity) || t.capacity < 1 || t.capacity > 30 || !Number.isFinite(t.x) || !Number.isFinite(t.y))) return false;
     if (s.guests.some(g => typeof g.id !== 'string' || typeof g.name !== 'string' || typeof g.tableId !== 'object' && typeof g.tableId !== 'string')) return false;
+    if (s.roomObjects !== undefined && (!Array.isArray(s.roomObjects) || s.roomObjects.length > 60 || s.roomObjects.some(o=>typeof o.id!=='string'||typeof o.name!=='string'||!Number.isFinite(o.x)||!Number.isFinite(o.y)||!['dance','entrance','stage','pillar'].includes(o.kind)))) return false;
     if (new Set(s.tables.map(t => t.id)).size !== s.tables.length || new Set(s.guests.map(g => g.id)).size !== s.guests.length) return false;
     return true;
   }
@@ -265,7 +315,12 @@
         Math.abs(t.x - (37 + n % 4 * 279)) < 3 && Math.abs(t.y - (188 + Math.floor(n / 4)*250)) < 3)) {
       data.tables.forEach((t,n) => {t.x=22+(n%3)*390;t.y=182+Math.floor(n/3)*400;});
     }
-    data.version = 2;
+    if ((data.version||1)<3 && data.tables.length===12 && data.tables.every((t,n)=>
+       Math.abs(t.x-(22+(n%3)*390))<3 && Math.abs(t.y-(182+Math.floor(n/3)*400))<3))
+      data.tables.forEach(t=>t.y+=62);
+    for(const t of data.tables) {t.shape=t.shape==='rect'?'rect':'round';t.rotation=[0,90,180,270].includes(t.rotation)?t.rotation:0;}
+    if(!Array.isArray(data.roomObjects))data.roomObjects=defaultObjects();
+    data.version=3;
     return data;
   }
 
@@ -365,51 +420,71 @@
       return `<div class="guest-item" role="listitem" draggable="true" tabindex="0" data-guest="${safe(g.id)}" aria-pressed="${selectedId === g.id}" title="Քաշեք կամ սեղմեք՝ սեղան ընտրելու համար">
         <span class="drag-icon" aria-hidden="true">⠿</span><span class="guest-initial">${safe(initials(g.name))}</span>
         <span class="guest-body"><span class="guest-name">${safe(g.name)}</span><span class="guest-detail"><span>${safe(g.side || 'Կողմը նշված չէ')}</span>${t ? `<b>· ${safe(t.name)} · տեղ ${g.seatNumber || '—'}</b>` : ''}</span></span>
-        <button type="button" class="guest-menu" data-edit-guest="${safe(g.id)}" aria-label="Խմբագրել ${safe(g.name)}">⋯</button></div>`;
+        ${t?`<button type="button" class="guest-menu locate-icon" data-locate-guest="${safe(g.id)}" title="Ցույց տալ սեղանը" aria-label="Գտնել ${safe(g.name)} նստատեղը">◎</button>`:''}<button type="button" class="guest-menu" data-edit-guest="${safe(g.id)}" aria-label="Խմբագրել ${safe(g.name)}">⋯</button></div>`;
     }).join('') : `<div class="empty-guest"><span class="empty-flower">✿</span><strong>${state.guests.length ? 'Համընկնող հյուրեր չկան' : 'Հյուրերի ցանկը դեռ դատարկ է'}</strong>${state.guests.length ? 'Փոխեք զտիչը կամ որոնման բառը։' : 'Ներմուծեք CSV / Excel ֆայլ կամ ավելացրեք հյուրերին ձեռքով։'}</div>`;
   }
 
-  // Eight numbered chairs radiate out from the round table, as in the reference.
-  // Tables with >8 seats also have an accessible numbered extension below the ring.
-  function seatMarkup(t, n, extra=false) {
-    const guest = atSeat(t.id, n);
-    const angle = -90 + (n - 1) * 45;
-    const flipped = angle > 90 || angle < -90;
-    const readableAngle = flipped ? angle + (angle < -90 ? 180 : -180) : angle;
-    const radius = flipped ? -113 : 113;
-    const body = guest ? `<span class="seat-name">${safe(guest.name)}</span>` : `<span class="seat-name">Ազատ տեղ</span>`;
-    const classes = `seat-slot ${guest ? 'occupied' : 'vacant'} ${extra?'extra-slot':''} ${flipped?'flipped-seat':''} ${selectedId === guest?.id?'seat-selected':''}`;
-    return `<button type="button" class="${classes}" data-seat="${n}" data-table-seat="${safe(t.id)}" ${guest?`data-table-guest="${safe(guest.id)}" draggable="true"`:''}
-      aria-label="${safe(t.name)}, տեղ ${n}: ${guest ? safe(guest.name) : 'ազատ'}"
-      title="${safe(t.name)} · Տեղ ${n} · ${guest ? safe(guest.name) : 'Ազատ'}"
-      ${!extra?`style="--seat-angle:${readableAngle}deg;--seat-radius:${radius}px"`:''}>
-      <span class="seat-number">${n}</span>${body}</button>`;
+  // Numbered, directly droppable chairs positioned around either round or long tables.
+  function positionForSeat(t, n) {
+    const N=t.capacity;let x,y;
+    if(t.shape==='rect') {
+      const topCount=Math.ceil(N/2),bottomCount=N-topCount;
+      const top=n<=topCount,idx=top?n-1:n-topCount-1;
+      const count=top?topCount:bottomCount;
+      x=175+(idx-(count-1)/2)*(Math.min(94,280/Math.max(1,count-1)));
+      y=top?90:260;
+    } else {
+      const a=(-Math.PI/2)+(n-1)*Math.PI*2/N;
+      x=175+140*Math.cos(a);y=175+140*Math.sin(a);
+    }
+    const rad=(t.rotation||0)*Math.PI/180;
+    const dx=x-175,dy=y-175;
+    return {x:Math.round(175+dx*Math.cos(rad)-dy*Math.sin(rad)),y:Math.round(175+dx*Math.sin(rad)+dy*Math.cos(rad))};
+  }
+  function seatMarkup(t,n) {
+    const guest=atSeat(t.id,n),p=positionForSeat(t,n);
+    const compact=t.capacity>12;
+    const w=t.capacity<=8?108:t.capacity<=10?84:t.capacity<=12?65:33;
+    const body=guest?safe(guest.name):(compact?'':'Ազատ տեղ');
+    return `<button type="button" class="seat-slot ${guest?'occupied':'vacant'} ${compact?'mini-seat':''} ${selectedId===guest?.id?'seat-selected':''}"
+      style="left:${p.x}px;top:${p.y}px;width:${w}px" data-seat="${n}" data-table-seat="${safe(t.id)}" ${guest?`data-table-guest="${safe(guest.id)}" draggable="true"`:''}
+      aria-label="${safe(t.name)}, տեղ ${n}: ${guest?safe(guest.name):'ազատ'}" title="${safe(t.name)} · Տեղ ${n} · ${guest?safe(guest.name):'Ազատ տեղ'}">
+      <span class="seat-number">${n}</span>${!compact?`<span class="seat-name">${body}</span>`:''}</button>`;
+  }
+  function renderRoom() {
+    const dims={dance:[336,84],entrance:[152,44],stage:[240,76],pillar:[48,48]};
+    $('roomLayer').innerHTML=(state.roomObjects||[]).map(o=>{
+      const [w,h]=dims[o.kind]||[140,50];
+      return `<div class="room-object" data-kind="${o.kind}" data-room-object="${safe(o.id)}" role="button" tabindex="0"
+         title="${safe(o.name)} · Տեղափոխելու համար միացրեք սեղանների շարժումը, կրկնակի սեղմումով խմբագրեք"
+         aria-label="${safe(o.name)}" style="left:${clamp(o.x,0,W-w)}px;top:${clamp(o.y,0,6000)}px;width:${w}px;height:${h}px">
+         <span>${o.kind==='pillar'?'◉':o.kind==='entrance'?'↧':o.kind==='stage'?'▥':'✦'} ${safe(o.name)}</span>
+         ${o.kind==='dance'?'<small>ՍՏԵՓԱՆ · ԱՆՆԱ</small>':''}
+      </div>`;
+    }).join('');
   }
   function renderTables() {
-    const canvas = $('floorCanvas');
-    const height = Math.max(1800, ...state.tables.map(t => Math.min(6000, t.y + (t.capacity>8?460:385))));
-    canvas.style.height = height + 'px';
-    $('tablesLayer').innerHTML = state.tables.map((t, i) => {
-      const members = atTable(t.id);
-      const full = members.length >= t.capacity;
-      const main = Array.from({length:Math.min(t.capacity,8)}, (_,n)=>seatMarkup(t,n+1)).join('');
-      const extras = t.capacity > 8 ? `<div class="seat-extras"><span class="extra-title">ԼՐԱՑՈՒՑԻՉ ՆՍՏԱՏԵՂԵՐ · ${t.capacity-8}</span><div class="extra-grid">${Array.from({length:t.capacity-8},(_,n)=>seatMarkup(t,n+9,true)).join('')}</div></div>` : '';
-      return `<article class="table-card ${full ? 'table-full' : ''} ${t.capacity > 8 ? 'extended-table' : ''}" data-table="${safe(t.id)}" tabindex="0" role="group" aria-label="${safe(t.name)}. ${members.length} հյուր, ${t.capacity} նստատեղ" style="left:${clamp(t.x,20,W-CW-20)}px;top:${clamp(t.y,154,5800)}px">
-        <div class="table-head"><button class="table-handle" data-move="${safe(t.id)}" type="button" title="Քաշեք սեղանը" aria-label="Տեղաշարժել ${safe(t.name)}">⠿</button><button class="table-edit" type="button" data-edit-table="${safe(t.id)}" title="Փոխել անունը կամ տեղերի քանակը" aria-label="Խմբագրել ${safe(t.name)}">✎</button></div>
-        <div class="seat-ring">${main}<button type="button" class="seat-disc" data-assign-table="${safe(t.id)}" title="Նստեցնել առաջին ազատ տեղում" aria-label="${safe(t.name)}, ${members.length} հյուր ${t.capacity}-ից։ Ընտրեք հյուրին և սեղմեք այստեղ՝ ազատ տեղում նստեցնելու համար։"><strong>${safe(t.name)}</strong><span>${members.length} / ${t.capacity}</span></button></div>
-        ${extras}
-      </article>`;
+    const canvas=$('floorCanvas');
+    const height=Math.max(1700,...state.tables.map(t=>Math.min(6200,t.y+380)),...(state.roomObjects||[]).map(o=>Math.min(6200,o.y+120)));
+    canvas.style.height=height+'px';
+    $('tablesLayer').innerHTML=state.tables.map(t=>{
+      const members=atTable(t.id),full=members.length>=t.capacity;
+      const seats=Array.from({length:t.capacity},(_,i)=>seatMarkup(t,i+1)).join('');
+      return `<article class="table-card ${full?'table-full':''} ${t.shape==='rect'?'table-rect':''}" data-table="${safe(t.id)}" tabindex="0" role="group"
+       aria-label="${safe(t.name)}. ${members.length} հյուր, ${t.capacity} նստատեղ" style="left:${clamp(t.x,20,W-CW-20)}px;top:${clamp(t.y,0,5800)}px">
+       <div class="table-head"><button class="table-handle" data-move="${safe(t.id)}" type="button" title="Քաշեք սեղանը">⠿</button><button class="table-edit" type="button" data-edit-table="${safe(t.id)}" title="Խմբագրել սեղանը" aria-label="Խմբագրել ${safe(t.name)}">✎</button></div>
+       <div class="seat-ring">${seats}<button type="button" class="seat-disc" data-assign-table="${safe(t.id)}" title="Ընտրեք հյուրին՝ առաջին ազատ տեղում նստեցնելու համար" aria-label="${safe(t.name)}, ${members.length} հյուր ${t.capacity}-ից"><strong>${safe(t.name)}</strong><span>${members.length} / ${t.capacity}</span></button></div>
+       </article>`;
     }).join('');
-    canvas.classList.toggle('move-mode', $('moveTablesToggle').checked);
-    if (selectedId) {
-      document.querySelectorAll('.table-card').forEach(el => el.classList.toggle('is-selected',guestFor(selectedId)?.tableId === el.dataset.table));
-    }
+    canvas.classList.toggle('move-mode',$('moveTablesToggle').checked);
+    document.querySelectorAll('.table-card').forEach(el=>el.classList.toggle('is-selected',guestFor(selectedId)?.tableId===el.dataset.table));
+    renderRoom();
   }
 
   function updateHint() {
     const selected = guestFor(selectedId);
     $('floorHint').textContent = $('moveTablesToggle').checked
-      ? '⠿ Քաշեք սեղանը ցանկացած մասից՝ սրահում դրա դիրքը փոխելու համար։'
+      ? '⠿ Քաշեք սեղանները և սրահի նշումները։ Նշման վրա կրկնակի սեղմեք՝ խմբագրելու համար։'
       : selected ? `Ընտրված է՝ ${selected.name}։ Սեղմեք համարակալված նստատեղին կամ սեղանի կենտրոնին։`
       : '✦ Քաշեք հյուրին դեպի համարակալված նստատեղը կամ սեղմեք ազատ տեղին։';
   }
@@ -464,6 +539,8 @@
 
   // Sidebar: select guests, edit, and desktop HTML5 drag events.
   $('guestList').addEventListener('click', e => {
+    const locate = e.target.closest('[data-locate-guest]');
+    if(locate)return locateGuest(locate.dataset.locateGuest);
     const edit = e.target.closest('[data-edit-guest]');
     if (edit) return openGuestDialog(edit.dataset.editGuest);
     const item = e.target.closest('[data-guest]');
@@ -486,6 +563,40 @@
     renderGuests();
   }));
 
+  // Canvas viewport: zoom, fit-to-width, trackpad pan; no server state involved.
+  const floorScroll=$('floorScroll');
+  let zoom=1;
+  function setZoom(value,center=true){
+    const next=clamp(Math.round(value*100)/100,.38,1.5);
+    const mx=center?(floorScroll.scrollLeft+floorScroll.clientWidth/2)/zoom:0;
+    const my=center?(floorScroll.scrollTop+floorScroll.clientHeight/2)/zoom:0;
+    zoom=next;$('floorCanvas').style.zoom=String(zoom);$('zoomLabel').textContent=Math.round(zoom*100)+'%';
+    if(center){floorScroll.scrollLeft=mx*zoom-floorScroll.clientWidth/2;floorScroll.scrollTop=my*zoom-floorScroll.clientHeight/2;}
+  }
+  const fitZoom=()=>setZoom(Math.min(1,(floorScroll.clientWidth-22)/W),false);
+  $('zoomIn').addEventListener('click',()=>setZoom(zoom+.12));
+  $('zoomOut').addEventListener('click',()=>setZoom(zoom-.12));
+  $('zoomFit').addEventListener('click',()=>fitZoom());
+  floorScroll.addEventListener('wheel',e=>{if(e.ctrlKey||e.metaKey){e.preventDefault();setZoom(zoom+(e.deltaY<0?.08:-.08));}},{passive:false});
+  let pan=null;
+  floorScroll.addEventListener('pointerdown',e=>{
+    if(e.button!==0||e.target.closest('.seat-slot,.seat-disc,.table-card,.room-object,button'))return;
+    pan={x:e.clientX,y:e.clientY,l:floorScroll.scrollLeft,t:floorScroll.scrollTop};
+    floorScroll.classList.add('panning');floorScroll.setPointerCapture(e.pointerId);
+  });
+  floorScroll.addEventListener('pointermove',e=>{if(!pan)return;floorScroll.scrollLeft=pan.l-(e.clientX-pan.x);floorScroll.scrollTop=pan.t-(e.clientY-pan.y);});
+  function stopPan(){pan=null;floorScroll.classList.remove('panning');}
+  floorScroll.addEventListener('pointerup',stopPan);floorScroll.addEventListener('pointercancel',stopPan);
+  function locateGuest(id){
+    const g=guestFor(id),t=tableFor(g?.tableId);if(!g||!t)return;
+    selectedId=g.id;listFilter='all';document.querySelectorAll('.filter').forEach(b=>{const on=b.dataset.filter==='all';b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+    render();floorScroll.scrollTo({left:Math.max(0,(t.x+175)*zoom-floorScroll.clientWidth/2),top:Math.max(0,(t.y+175)*zoom-floorScroll.clientHeight/2),behavior:'smooth'});
+    const card=Array.from(document.querySelectorAll('.table-card')).find(x=>x.dataset.table===t.id);
+    if(card){card.classList.add('located');setTimeout(()=>card.classList.remove('located'),2800);}
+    toast(`${g.name} · ${t.name} · նստատեղ ${g.seatNumber}`);
+  }
+  // Ctrl + mouse wheel zooms; otherwise browser scrollbars and drag-to-pan navigate the hall.
+  requestAnimationFrame(()=>fitZoom());
   const layer = $('tablesLayer');
   layer.addEventListener('click', e => {
     const edit = e.target.closest('[data-edit-table]');
@@ -553,9 +664,9 @@
     moving=true;card.classList.add('moving');
     card.setPointerCapture(e.pointerId);
     const onMove=(ev)=>{
-      const maxY=Math.max(740,$('floorCanvas').clientHeight-CH-32);
-      t.x=clamp(Math.round(oldX+ev.clientX-x0),24,W-CW-24);
-      t.y=clamp(Math.round(oldY+ev.clientY-y0),164,maxY);
+      const maxY=Math.max(740,$('floorCanvas').offsetHeight-CH-32);
+      t.x=clamp(Math.round(oldX+(ev.clientX-x0)/zoom),24,W-CW-24);
+      t.y=clamp(Math.round(oldY+(ev.clientY-y0)/zoom),10,maxY);
       card.style.left=t.x+'px';card.style.top=t.y+'px';
       if(t.x!==oldX||t.y!==oldY) changed=true;
     };
@@ -606,6 +717,7 @@
     const table=tableFor(id);if(!table)return;
     editingTableId=id;
     $('tableName').value=table.name;$('tableCapacity').value=table.capacity;
+    $('tableShape').value=table.shape==='rect'?'rect':'round';$('tableRotation').value=String(table.rotation||0);
     $('tableDialog').showModal();
   }
   $('tableForm').addEventListener('submit',e => {
@@ -614,7 +726,7 @@
     const name=$('tableName').value.trim(),capacity=Number($('tableCapacity').value);
     if(!name || !Number.isInteger(capacity) || capacity<1||capacity>30)return;
     if(capacity<atTable(table.id).length){toast(`Այս սեղանի մոտ արդեն նստած է ${atTable(table.id).length} հյուր։`,true);return;}
-    change(()=>{table.name=name;table.capacity=capacity;});
+    change(()=>{table.name=name;table.capacity=capacity;table.shape=$('tableShape').value;table.rotation=Number($('tableRotation').value)||0;normalizeSeats(state);});
     $('tableDialog').close();toast('Սեղանի տվյալները պահպանվեցին։');
   });
   $('deleteTableBtn').addEventListener('click',()=>{
@@ -623,16 +735,42 @@
     change(()=>{state.tables=state.tables.filter(item=>item.id!==t.id);state.guests.forEach(g=>{if(g.tableId===t.id){g.tableId=null;g.seatNumber=null;}});});
     $('tableDialog').close();toast('Սեղանը ջնջվեց։');
   });
-  $('addTableBtn').addEventListener('click',()=>{
+  function createTable(shape='round') {
     if(state.tables.length>=150){toast('Սեղանների առավելագույն քանակը 150 է։',true);return;}
-    let i=state.tables.length + 1;
-    const existing = new Set(state.tables.map(t=>t.name));
-    while(existing.has(`Սեղան ${i}`))i++;
+    let i=state.tables.length+1;const names=new Set(state.tables.map(t=>t.name));while(names.has(`Սեղան ${i}`))i++;
     const n=state.tables.length;
-    const t={id:newId(),name:`Սեղան ${i}`,capacity:8,x:22+(n%3)*390,y:182+Math.floor(n/3)*400};
+    const t={id:newId(),name:`Սեղան ${i}`,capacity:8,shape,rotation:0,x:22+(n%3)*390,y:244+Math.floor(n/3)*400};
     change(()=>state.tables.push(t));
-    $('floorCanvas').style.height=Math.max(1060,t.y+315)+'px';
-    toast('Ավելացվել է նոր սեղան։');
+    floorScroll.scrollTo({left:Math.max(0,(t.x+175)*zoom-floorScroll.clientWidth/2),top:Math.max(0,(t.y+175)*zoom-floorScroll.clientHeight/2),behavior:'smooth'});
+    toast(`${shape==='rect'?'Երկար':'Կլոր'} սեղանը ավելացվեց։`);
+  }
+  $('addTableBtn').addEventListener('click',()=>createTable());
+  $('quickRound').addEventListener('click',()=>createTable('round'));
+  $('quickRect').addEventListener('click',()=>createTable('rect'));
+
+  const roomSize={dance:[336,84],entrance:[152,44],stage:[240,76],pillar:[48,48]};
+  const roomLabel={dance:'ՊԱՐԱՀՐԱՊԱՐԱԿ',entrance:'ՄՈՒՏՔ',stage:'ԲԵՄ',pillar:'ՍՅՈՒՆ'};
+  let editingRoomId=null;
+  function addRoom(kind){
+    if(state.roomObjects.length>=60){toast('Սրահի տարրերի առավելագույն քանակը 60 է։',true);return;}
+    const i=state.roomObjects.filter(o=>o.kind===kind).length;
+    change(()=>state.roomObjects.push({id:newId(),kind,name:roomLabel[kind]+(i?' '+(i+1):''),x:Math.round(W/2-roomSize[kind][0]/2),y:Math.max(70,Math.round(floorScroll.scrollTop/zoom+floorScroll.clientHeight/zoom/2))}));
+    $('moveTablesToggle').checked=true;render();toast('Նոր տարրը ավելացվեց․ կարող եք տեղափոխել այն։');
+  }
+  [['addDance','dance'],['addEntrance','entrance'],['addStage','stage'],['addPillar','pillar']].forEach(([id,kind])=>$(id).addEventListener('click',()=>addRoom(kind)));
+  const roomLayer=$('roomLayer');
+  roomLayer.addEventListener('dblclick',e=>{const node=e.target.closest('[data-room-object]');if(!node)return;const o=state.roomObjects.find(x=>x.id===node.dataset.roomObject);if(!o)return;editingRoomId=o.id;$('objectName').value=o.name;$('objectDialog').showModal();});
+  roomLayer.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const o=e.target.closest('[data-room-object]');if(o)o.dispatchEvent(new MouseEvent('dblclick',{bubbles:true}));});
+  $('objectForm').addEventListener('submit',e=>{e.preventDefault();const o=state.roomObjects.find(x=>x.id===editingRoomId);if(!o)return;const name=$('objectName').value.trim();if(!name)return;change(()=>o.name=name);$('objectDialog').close();});
+  $('deleteObject').addEventListener('click',()=>{const o=state.roomObjects.find(x=>x.id===editingRoomId);if(!o)return;if(!confirm(`Ջնջե՞լ «${o.name}» տարրը։`))return;change(()=>state.roomObjects=state.roomObjects.filter(x=>x.id!==o.id));$('objectDialog').close();});
+  roomLayer.addEventListener('pointerdown',e=>{
+    const node=e.target.closest('[data-room-object]');if(!node||!$('moveTablesToggle').checked||e.button!==0)return;
+    const o=state.roomObjects.find(x=>x.id===node.dataset.roomObject);if(!o)return;
+    e.preventDefault();const [w,h]=roomSize[o.kind];const oldX=o.x,oldY=o.y,startX=e.clientX,startY=e.clientY;
+    let moved=false;node.classList.add('moving-room');node.setPointerCapture(e.pointerId);
+    const move=ev=>{o.x=clamp(Math.round(oldX+(ev.clientX-startX)/zoom),0,W-w);o.y=clamp(Math.round(oldY+(ev.clientY-startY)/zoom),0,Math.max(1300,$('floorCanvas').offsetHeight-h));node.style.left=o.x+'px';node.style.top=o.y+'px';if(o.x!==oldX||o.y!==oldY)moved=true;};
+    const up=()=>{node.removeEventListener('pointermove',move);node.removeEventListener('pointerup',up);node.removeEventListener('pointercancel',up);node.classList.remove('moving-room');if(moved){const x=o.x,y=o.y;o.x=oldX;o.y=oldY;change(()=>{o.x=x;o.y=y;});}};
+    node.addEventListener('pointermove',move);node.addEventListener('pointerup',up);node.addEventListener('pointercancel',up);
   });
 
   document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click',()=>$(b.dataset.close).close()));
@@ -824,7 +962,7 @@
       const parsed=JSON.parse(await file.text());
       if(!isValidState(parsed))throw new Error('Սա վավեր պահուստային պատճեն չէ։');
       if(!confirm('Վերականգնե՞լ տվյալները։ Առկա հյուրերն ու սեղանները կփոխարինվեն։'))return;
-      change(()=>{state=normalizeSeats({version:parsed.version||1,guests:clone(parsed.guests),tables:clone(parsed.tables)});selectedId=null;});
+      change(()=>{state=normalizeSeats({version:parsed.version||1,guests:clone(parsed.guests),tables:clone(parsed.tables),roomObjects:clone(parsed.roomObjects||defaultObjects())});selectedId=null;});
       toast('Պլանն ամբողջությամբ վերականգնվել է։');
     }catch(err){toast(`Վերականգնման սխալ. ${err.message}`,true);}
     finally{e.target.value='';}
@@ -833,6 +971,29 @@
     if(!confirm('Մաքրել ամբողջ հյուրերի ցանկը և վերականգնել 12 դատարկ սեղա՞ն։ Նախ պահպանեք JSON պահուստային պատճեն։'))return;
     change(()=>{state=defaultState();selectedId=null;});
     toast('Սկզբնական պլանը վերականգնվել է։');
+  });
+
+  // High-resolution seating MAP exported using browser canvas, without an external image service.
+  $('exportPlanPng').addEventListener('click',()=>{
+    const roomHeight=Math.min(5700,Math.max(1650,...state.tables.map(t=>t.y+375),...state.roomObjects.map(o=>o.y+110)));
+    const density=1.45,c=document.createElement('canvas');c.width=Math.ceil(W*density);c.height=Math.ceil((roomHeight+115)*density);
+    const ctx=c.getContext('2d');ctx.scale(density,density);
+    ctx.fillStyle='#222427';ctx.fillRect(0,0,W,roomHeight+115);
+    ctx.fillStyle='#fff8f3';ctx.fillRect(0,0,W,100);ctx.fillStyle='#6b1732';ctx.textAlign='center';ctx.font='bold 28px "Noto Serif Armenian",serif';ctx.fillText('Ստեփան և Աննա · Հյուրերի նստեցում',W/2,43);
+    ctx.font='15px "Noto Sans Armenian",sans-serif';ctx.fillText('01 · 11 · 2026     •     Vivaldi Hall',W/2,74);
+    ctx.save();ctx.translate(0,100);
+    ctx.strokeStyle='#ffffff12';ctx.lineWidth=1;for(let x=0;x<W;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,roomHeight);ctx.stroke();}for(let y=0;y<roomHeight;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+    ctx.strokeStyle='#a18b8150';ctx.strokeRect(22,22,W-44,roomHeight-44);
+    for(const o of state.roomObjects){const [w,h]=roomSize[o.kind];ctx.fillStyle=o.kind==='entrance'?'#4f4547':'#49313e';ctx.strokeStyle='#ad8b96';ctx.beginPath();ctx.roundRect(o.x,o.y,w,h,o.kind==='pillar'?h/2:5);ctx.fill();ctx.stroke();ctx.fillStyle='#f4e2e0';ctx.textAlign='center';ctx.font='bold 13px "Noto Sans Armenian",sans-serif';ctx.fillText(o.name,o.x+w/2,o.y+h/2+4,w-8);}
+    for(const t of state.tables){const x=t.x+175,y=t.y+175;ctx.fillStyle='#f3e6e1';ctx.strokeStyle='#ad8b96';ctx.lineWidth=2;ctx.beginPath();if(t.shape==='rect')ctx.roundRect(x-93,y-48,186,96,14);else ctx.arc(x,y,63,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.fillStyle='#6b1732';ctx.textAlign='center';ctx.font='bold 16px "Noto Sans Armenian",sans-serif';ctx.fillText(t.name,x,y-1,160);ctx.font='13px sans-serif';ctx.fillText(`${atTable(t.id).length}/${t.capacity}`,x,y+21);
+      for(let n=1;n<=t.capacity;n++){const pos=positionForSeat(t,n),g=atSeat(t.id,n),cx=t.x+pos.x,cy=t.y+pos.y;
+        const wd=t.capacity<=8?106:t.capacity<=10?80:t.capacity<=12?65:34;ctx.fillStyle=g?'#fbf8f5':'#4c4b4e';ctx.strokeStyle=g?'#cfc0c0':'#a19ca1';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(cx-wd/2,cy-17,wd,34,16);ctx.fill();ctx.stroke();
+        ctx.fillStyle=g?'#6b1732':'#e4dfe1';ctx.beginPath();ctx.arc(cx-wd/2+14,cy,11,0,Math.PI*2);ctx.fill();ctx.fillStyle=g?'#ffffff':'#2b272c';ctx.font='bold 10px sans-serif';ctx.fillText(String(n),cx-wd/2+14,cy+4);
+        if(t.capacity<=12){ctx.fillStyle=g?'#32242a':'#e0d7dc';ctx.font='9px "Noto Sans Armenian",sans-serif';const label=g?.name||'Ազատ';ctx.fillText(label.length>14?label.slice(0,12)+'…':label,cx+11,cy+3,wd-32);}
+      }
+    }
+    ctx.restore();
+    c.toBlob(blob=>{if(!blob){toast('PNG չի հաջողվել ստեղծել։',true);return;}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`stepan-anna-hall-map-${today()}.png`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Սրահի PNG քարտեզը ներբեռնվեց։');},'image/png');
   });
 
   function printPlan() {
